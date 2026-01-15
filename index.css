@@ -1,0 +1,1020 @@
+/* =================================== */
+/* Estilos Base y Variables            */
+/* =================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --color-principal: #34495e; /* Azul oscuro suave */
+    --color-secundario: #4a90e2; /* Azul brillante */
+    --color-acento: #ff6b6b; /* Un rojo anaranjado */
+    --color-fondo-claro: #f4f6f9; /* Un gris muy claro */
+    --color-fondo-medio: #e9eff5; /* Un gris un poco más oscuro */
+    --color-tarjeta: #ffffff;
+    --sombra-tarjeta: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra más suave */
+    --sombra-hover: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra al pasar el ratón */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-fondo-claro);
+    color: var(--color-principal);
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+     flex: 1;
+}
+
+
+
+
+/* =================================== */
+/* Componentes del Header              */
+/* =================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--color-fondo-medio);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-principal);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.underline-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.underline-nav a {
+    position: relative;
+    color: var(--color-principal);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 0;
+    transition: .5s ease;
+}
+
+.underline-nav a:hover {
+    color: var(--color-acento);
+}
+
+.underline-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    display: block;
+    margin-top: 5px;
+    background: var(--color-acento);
+    transition: width .3s ease;
+}
+.underline-nav a:hover::after {
+    width: 100%;
+}
+
+/* Selector de idioma */
+nav ul li select {
+  padding: 6px 30px 6px 12px; /* Aumentar el padding derecho */
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: 1.5px solid #007bff;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  appearance: none; /* Quitar el estilo por defecto en navegadores modernos */
+  background-image:
+    linear-gradient(45deg, transparent 50%, #007bff 50%),
+    linear-gradient(135deg, #007bff 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 15px) calc(1em + 2px), /* Ajustar posición X */
+    calc(100% - 10px) calc(1em + 2px), /* Ajustar posición X */
+    calc(100% - 20px) 0.5em; /* Ajustar posición X */
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+/* Cambiar borde al enfocar */
+nav ul li select:focus {
+  outline: none;
+  border-color: #0056b3;
+}
+
+/* =================================== */
+/* Sección Hero y Buscador             */
+/* =================================== */
+.hero {
+    text-align: center;
+    padding: 80px 20px 50px;
+    background-color: var(--color-tarjeta);
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#titulo {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#subtitulo {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.buscador-hero {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buscador-hero input,
+.buscador-hero button {
+    height: 40px;
+    font-size: 1rem;
+    padding: 0 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.buscador-hero input {
+    width: 400px;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Esto ya estaba, lo dejo aquí para agrupar */
+    box-shadow: var(--sombra-hover);
+}
+
+/* Buscador flotante (para el HTML mejorado) */
+#buscador-flotante {
+    position: fixed;
+    top: -60px; /* Oculto por defecto */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
+    transition: top 0.3s ease-in-out;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#buscador-flotante.activo {
+    top: 0; /* Visible */
+}
+
+#buscador-flotante input,
+#buscador-flotante button {
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#buscador-flotante input {
+    width: 200px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+#buscador-flotante button {
+    width: 120px;
+    cursor: pointer;
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#buscador-flotante button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: var(--sombra-hover);
+}
+
+/* Estilos para la sección de estadísticas (index.css) */
+.estadisticas {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 20px;
+    background-color: var(--color-fondo-medio);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1000px;
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.contador-item {
+    text-align: center;
+}
+
+.contador-item h3 {
+    font-size: 1.2rem;
+    color: var(--color-secundario);
+    margin-bottom: 5px;
+}
+
+.contador-item p {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-principal);
+}
+/* =================================== */
+/* Sección de Destacados               */
+/* =================================== */
+.destacados {
+    padding: 60px 30px;
+    background-color: var(--color-fondo-medio);
+    text-align: center;
+}
+
+.destacados h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--color-tarjeta);
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: var(--sombra-tarjeta);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: var(--sombra-hover);
+}
+/* Estilos para la sección de artículos */
+.articulos-recientes {
+    padding: 80px 30px;
+    background-color: var(--color-fondo-claro);
+    text-align: center;
+}
+
+.articulos-recientes h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: var(--color-principal);
+}
+
+.contenedor-articulos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-content: center;
+}
+
+.articulo-card {
+    background-color: var(--color-tarjeta);
+    border-radius: 12px;
+    box-shadow: var(--sombra-tarjeta);
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.articulo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-hover);
+}
+
+.articulo-card img {
+    width: 100%;
+    height: 200px; /* Tamaño fijo para la imagen */
+    object-fit: cover; /* Recorta la imagen para que se ajuste sin distorsionarse */
+    border-bottom: 1px solid #eee;
+}
+
+.articulo-contenido {
+    padding: 25px;
+    text-align: left;
+}
+
+.articulo-contenido h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--color-principal)
+}
+
+.articulo-contenido p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.fecha {
+    display: block;
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 10px;
+}
+.btn-leer-mas {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-secundario);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.btn-leer-mas:hover {
+    background-color: #3b74c2;
+}
+
+/*PARTE DE COLABORADORES*/
+
+.colaboradores-futuros {
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.colaboradores-futuros h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.colaboradores-futuros p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.contenedor-colaboradores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.colaborador-card {
+    background-color: var(--color-tarjeta);
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: var(--sombra-tarjeta);
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.colaborador-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Para una foto de perfil redonda */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+.colaborador-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =================================== */
+/* Pie de Página (Footer)              */
+/* =================================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    background-color: var(--color-fondo-medio);
+    border-top: 1px solid #ccc;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    z-index: 500;
+}
+
+footer a {
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 1.4rem;
+    color: var(--color-principal);
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--color-acento);
+}
+
+/* =================================== */
+/* Estilos Responsive                  */
+/* =================================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .buscador-hero input {
+        width: 100%; /* Ajusta el ancho para móviles */
+    }
+}
+
+/* =================================== */
+/* Estilos de las Secciones de Química */
+/* =================================== */
+
+.categoria-seccion {
+    padding: 80px 30px;
+    background-color: var(--color-fondo-claro);
+    text-align: center;
+}
+
+/* =================================== */
+/* Estilos para el Filtro de Artículos */
+/* =================================== */
+.filtro-articulos {
+    padding: 40px 30px;
+    background-color: var(--color-tarjeta);
+    box-shadow: var(--sombra-tarjeta);
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.filtro-articulos h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--color-principal);
+}
+
+#formulario-buscador {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end; /* Alinea los elementos en la base */
+    gap: 20px;
+}
+
+.grupo-filtro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.grupo-filtro label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.filtro-articulos input,
+.filtro-articulos select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.filtro-articulos input:focus,
+.filtro-articulos select:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+}
+
+.filtro-articulos button {
+    margin-top: auto; /* Empuja el botón hacia la parte inferior para alinearlo */
+}
+
+@media (max-width: 600px) {
+    #formulario-buscador {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+.categoria-seccion h2 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+    color: var(--color-principal);
+}
+
+.articulos-subapartado {
+    margin-bottom: 50px;
+}
+
+.articulos-subapartado h3 {
+    font-size: 2rem;
+    color: var(--color-principal);
+    margin-bottom: 20px;
+}
+
+.articulos-subapartado .articulos-subapartado-descripcion {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.separador {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 60px auto;
+    width: 50%;
+}
+.articulo-card-quimica {
+    background-color: var(--color-tarjeta);
+    border-radius: 12px;
+    box-shadow: var(--sombra-tarjeta);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: var(--color-principal);
+}
+
+.articulo-card-quimica:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-hover);
+}
+
+.articulo-card-quimica img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.articulo-quimica-contenido {
+    padding: 25px;
+    text-align: left;
+}
+
+.articulo-quimica-contenido h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.articulo-quimica-contenido p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.fecha {
+    display: block;
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.btn-leer-mas {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-secundario);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-leer-mas:hover {
+    background-color: #3b74c2;
+}
+.articulos-quimica-contenedor-elementos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* =================================== */
+/* Estilos para Tarjetas de Videos     */
+/* =================================== */
+.video-card {
+    position: relative;
+    display: block;
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra-tarjeta);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: var(--color-principal);
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-hover);
+}
+
+.video-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.video-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-card:hover .video-card-overlay {
+    opacity: 1;
+}
+
+.video-card-overlay i {
+    font-size: 3rem;
+    color: white;
+}
+
+.video-card h4 {
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+/* =================================== */
+/* Estilos para Banners de Organizaciones */
+/* =================================== */
+
+.contenedor-banners {
+    display: flex; /* Mantenemos flexbox para los banners */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.banner-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-tarjeta);
+    border-radius: 12px;
+    box-shadow: var(--sombra-tarjeta);
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-principal);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover);
+}
+
+.banner-card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.banner-card h4 {
+    font-size: 1.2rem;
+    padding: 15px;
+}
+
+
+/* =================================== */
+/* Estilos para los Metadatos */
+/* =================================== */
+
+.meta-data {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px; /* Espacio entre los elementos de los metadatos */
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.idioma {
+    font-size: 1.2rem;
+}
+
+.dificultad {
+    padding: 3px 8px;
+    background-color: #e9eff5;
+    border-radius: 5px;
+    color: var(--color-principal);
+    font-weight: 600;
+}
+
+.fecha-publicacion {
+    font-style: italic;
+    color: #777;
+}
+
+/* Puedes añadir más estilos si quieres que cada nivel de dificultad tenga un color diferente */
+/* Por ejemplo: */
+.dificultad.basico {
+    background-color: #d1f7e0; /* Verde suave */
+}
+
+.dificultad.intermedio {
+    background-color: #f7e9d1; /* Naranja suave */
+}
+
+.dificultad.avanzado {
+    background-color: #f7d1d1; /* Rojo suave */
+}
+
+/* Actualiza el CSS de la tarjeta de video para que coincida */
+.video-card .meta-data {
+    padding: 0 15px 15px; /* Relleno para que no se pegue al borde */
+}
+
+
+
+/* Estilos para el Formulario de Inicio de Sesión y Registro */
+.form-main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.formulario-container {
+    background-color: #fff; 
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    position: relative; 
+    overflow: hidden; 
+    width: 768px; 
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.formulario-container p{
+    font-size: 12px; 
+    line-height: 20px; 
+    letter-spacing: 0.3px; 
+    margin: 20px 0; 
+}
+
+.formulario-container span{
+    font-size: 12px;
+}
+
+.formulario-container a{
+    color: #333;
+    font-size: 13px;
+    text-decoration: none; 
+    margin: 15px 0 10px; 
+}
+
+.formulario-container button{
+    background-color: #512da8;
+    color: #fff; 
+    font-size: 12px;
+    padding: 10px 45px; 
+    border: 1px solid transparent; 
+    border-radius: 8px; 
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.formulario-container button.hidden{
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.formulario-container form{
+    background-color: #fff;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.formulario-container input{
+    background-color: #eee;
+    border: none; 
+    margin: 8px 0; 
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px; 
+    width: 100%;
+    outline: none; 
+}
+
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out; 
+}
+
+.sign-in{
+   left: 0; 
+    width: 50%;
+}
+
+.formulario-container.active .sign-in{
+    transform: translateX(100%);
+}
+
+
+.sign-up{
+    left: 0; 
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.formulario-container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social-icons-formulario{
+    margin: 20px 0;
+}
+
+.social-icons-formulario a{
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 3px; 
+    width: 40px;
+    height: 40px;
+}
+
+.toggle-container-formulario{
+    position: absolute; 
+    top: 0;
+    left: 50%;
+    width: 50%; 
+    height: 100%; 
+    overflow: hidden; 
+    transition: all 0.6s ease-in-out; 
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.formulario-container.active .toggle-container-formulario{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle{
+    background-color: #512da8;
+    height: 100%;
+    background-color: linear-gradient(to right, #5c6bc0, #512da8);
+    color: #fff;
+    position: relative; 
+    left: -100%; 
+    height: 100%; 
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.formulario-container.active .toggle{
+    transform: translateX(50%);
+}
+
+.toggle-panel{
+    position: absolute; 
+    width: 50%;
+    height: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center; 
+    top: 0; 
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left{
+    transform: translateX(-200%);
+}
+
+.formulario-container.active .toggle-left{
+    transform: translateX(0);
+}
+
+.toggle-right{
+    right: 0;
+    transform: translateX(0);
+}
+
+.formulario-container.active .toggle-right{
+    transform: translateX(200%);
+}

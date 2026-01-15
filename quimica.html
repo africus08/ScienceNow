@@ -1,0 +1,259 @@
+<!DOCTYPE html> 
+<html lang="es">   
+<head>     
+    <meta charset="UTF-8" />     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />     
+    <title>Química - CienciAhora</title>     
+    <link rel="stylesheet" href="index.css" />     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head> 
+<body> 
+    <div class="wrapper">
+         <header>
+            <div class="logo">CienciAhora</div>
+            <nav class="underline-nav">
+                    <a href="index.html">Inicio</a>
+                    <a href="destacados">Categorías</a>
+                    <a href="#">Artículos destacados</a>
+                    <a href="#">Comunidad</a>
+                    <a href="#">Contacto</a>
+                    <a href="formulario.html">Iniciar Sesión </a>
+                    <ul>
+                    <li>
+                        <select name="idioma" id="selector-idioma" aria-label="Selector de idioma">
+                            <option value="es" selected> ES Español</option>
+                            <option value="en"> EN English</option>
+                            <option value="fr"> FR Français</option>
+                            <option value="de"> DE Deutsch</option>
+                            <option value="pl"> PL Polski </option>
+                            <option value="ru"> RU Русский</option>
+                            <option value="zh"> 中文</option>
+                            <option value="ja"> 日本語</option> 
+                            <option value="ar"> AR العربية</option>
+                        </select>
+                    </li>
+                    </ul>
+            </nav>
+        </header>
+        <main>
+            
+            <section class="categoria-seccion" id="quimica">
+                <h2>🔬 Química</h2>
+                <section class="filtro-articulos">
+                    <h3>Encuentra el artículo perfecto</h3>
+                    <form id="formulario-buscador">
+
+                        <div class="grupo-filtro">
+                            <input type="text" id="filtro-titulo" placeholder="Buscar por título...">
+                        </div>
+            
+                        <div class="grupo-filtro">
+                            <label for="filtro-dificultad">Nivel:</label>
+                            <select id="filtro-dificultad">
+                               <option value="todos" selected>Todos</option>
+                               <option value="Básico">Básico</option>
+                               <option value="Intermedio">Intermedio</option>
+                               <option value="Avanzado">Avanzado</option>
+                            </select>
+                        </div>
+            
+                        <div class="grupo-filtro">
+                           <label for="filtro-fecha">Fecha:</label>
+                           <select id="filtro-fecha">
+                              <option value="todos" selected>Recientes</option>
+                              <option value="antiguos">Antiguos</option>
+                           </select>
+                        </div>
+
+                        <button type="submit" class="btn" onclick="buscar()">Buscar</button>
+
+                    </form>
+                 </section>
+
+                <div class="articulos-subapartado">
+                   <h3>Artículos</h3>
+                   <div class="articulos-quimica-contenedor-elementos">
+                      <article class="articulo-card-quimica">
+                         <img src="Imagenes/tabla_periodica.jpg" alt="Imagen del artículo de Química">
+                         <div class="articulo-quimica-contenido">
+                            <h4>La magia de la tabla periódica</h4>
+                            <p>Un recorrido fascinante por la historia y secretos de los elementos...</p>
+                            <div class="meta-data">
+                               <span class="dificultad" aria-label="Nivel: Básico">Nivel: Básico</span>
+                               <span class="fecha-publicacion" aria-label="Publicado el"> 08 de septiembre, 2025</span>
+                            </div>
+                            <a href="#" class="btn-leer-mas">Leer más</a>
+                         </div>
+                      </article>
+
+                      <article class="articulo-card-quimica">
+                         <img src="Imagenes/enlaces.png" alt="Imagen del artículo de Química">
+                         <div class="articulo-quimica-contenido">
+                            <h4>Explorando los enlaces químicos</h4>
+                            <p>Una guía para entender cómo se forman los compuestos</p>
+                            <div class="meta-data">
+                               <span class="dificultad" aria-label="Nivel: Básico">Nivel: Básico</span>
+                               <span class="fecha-publicacion" aria-label="Publicado el"> 08 de septiembre, 2025</span>
+                            </div>
+                            <a href="#" class="btn-leer-mas">Leer más</a>
+                         </div>
+                      </article>
+
+                      <article class="articulo-card-quimica">
+                         <img src="Imagenes/reacciones.png" alt="Imagen del artículo de Química">
+                         <div class="articulo-quimica-contenido">
+                            <h4>Explorando las reacciones químicas</h4>
+                            <p>Una guía para entender cómo se producen las reacciones químicas</p>
+                            <div class="meta-data">
+                               <span class="dificultad" aria-label="Nivel: Básico">Nivel: Básico</span>
+                               <span class="fecha-publicacion" aria-label="Publicado el"> 08 de septiembre, 2025</span>
+                            </div>
+                            <a href="#" class="btn-leer-mas">Leer más</a>
+                         </div>
+                      </article>
+                    </div>
+                </div>
+        
+            <hr class="separador">
+
+                <div class="videos-quimica-subapartado">
+                   <h3>Videos </h3>
+                   <p class="videos-quimica-subapartado-descripcion">Videos educativos y experimentos caseros para entender mejor la química.</p>
+                   
+                   <div class="videos-quimica-contenedor-elementos">
+                      <a href="https://youtu.be/PPZfaO3TPf0?si=fBw5qjIPeWaWG8lc" target="_blank" class="video-card">
+                         <img src="https://img.youtube.com/vi/PPZfaO3TPf0/hqdefault.jpg" alt="Miniatura del video">
+                         <div class="video-quimica-card-overlay">
+                            <i class="fas fa-play"></i> 
+                         </div>
+                         <h4>Cómo hacer un volcán casero</h4>
+                         <div class="meta-data">
+                            <span class="idioma" aria-label="Idioma: Español">🇪s</span>
+                            <span class="dificultad" aria-label="Nivel: Intermedio"> Nivel: Intermedio</span>
+                            <span class="fecha-publicacion" aria-label="Publicado el">08 de septiembre, 2025</span>
+                         </div>
+                      </a>
+                   </div>
+                
+                   <div class="videos-quimica-contenedor-elementos">
+                      <a href="https://youtu.be/P3RXtoYCW4M?si=5r80n9njpKbZpGGG" target="_blank" class="video-card">
+                         <img src="https://img.youtube.com/vi/P3RXtoYCW4M/hqdefault.jpg" alt="Miniatura del video">
+                         <div class="video-quimica-card-overlay">
+                            <i class="fas fa-play"></i> 
+                         </div>
+                         <h4>Map of chemistry</h4>
+                         <div class="meta-data">
+                            <span class="idioma" aria-label="Idioma: Inglés">🇬🇧</span>
+                            <span class="dificultad" aria-label="Nivel: Básico">Nivel: Básico</span>
+                            <span class="fecha-publicacion" aria-label="Publicado el">08 de septiembre, 2025</span>
+                         </div>
+                       </a>
+                   </div>
+
+                   <div class="videos-quimica-contenedor-elementos">
+                      <a href="https://youtu.be/PPZfaO3TPf0?si=fBw5qjIPeWaWG8lc" target="_blank" class="video-card">
+                         <img src="https://img.youtube.com/vi/PPZfaO3TPf0/hqdefault.jpg" alt="Miniatura del video">
+                         <div class="video-quimica-card-overlay">
+                            <i class="fas fa-play"></i> 
+                         </div>
+                         <h4>Jak zrobić domowy wulkan</h4>
+                         <div class="meta-data">
+                            <span class="idioma" aria-label="Idioma: Polaco">🇵🇱</span>
+                            <span class="dificultad" aria-label="Nivel: Básico">Nivel: Básico</span>
+                            <span class="fecha-publicacion" aria-label="Publicado el">08 de septiembre, 2025</span>
+                         </div>
+                      </a>
+                   </div>
+                </div>
+
+                <div class="videos-quimica-contenedor-elementos">
+                      <a href="https://youtu.be/PPZfaO3TPf0?si=fBw5qjIPeWaWG8lc" target="_blank" class="video-card">
+                         <img src="https://img.youtube.com/vi/PPZfaO3TPf0/hqdefault.jpg" alt="Miniatura del video">
+                         <div class="video-quimica-card-overlay">
+                            <i class="fas fa-play"></i> 
+                         </div>
+                         <h4>Cómo hacer un volcán casero</h4>
+                         <div class="meta-data">
+                            <span class="idioma" aria-label="Idioma: Español">🇪s</span>
+                            <span class="dificultad" aria-label="Nivel: Intermedio"> Nivel: Intermedio</span>
+                            <span class="fecha-publicacion" aria-label="Publicado el">08 de septiembre, 2025</span>
+                         </div>
+                      </a>
+                   </div>
+                
+                   <div class="videos-quimica-contenedor-elementos">
+                      <a href="https://youtu.be/P3RXtoYCW4M?si=5r80n9njpKbZpGGG" target="_blank" class="video-card">
+                         <img src="https://img.youtube.com/vi/P3RXtoYCW4M/hqdefault.jpg" alt="Miniatura del video">
+                         <div class="video-quimica-card-overlay">
+                            <i class="fas fa-play"></i> 
+                         </div>
+                         <h4>Map of chemistry</h4>
+                         <div class="meta-data">
+                            <span class="idioma" aria-label="Idioma: Inglés">🇬🇧</span>
+                            <span class="dificultad" aria-label="Nivel: Básico">Nivel: Básico</span>
+                            <span class="fecha-publicacion" aria-label="Publicado el">08 de septiembre, 2025</span>
+                         </div>
+                       </a>
+                   </div>
+
+                   <div class="videos-quimica-contenedor-elementos">
+                      <a href="https://youtu.be/PPZfaO3TPf0?si=fBw5qjIPeWaWG8lc" target="_blank" class="video-card">
+                         <img src="https://img.youtube.com/vi/PPZfaO3TPf0/hqdefault.jpg" alt="Miniatura del video">
+                         <div class="video-quimica-card-overlay">
+                            <i class="fas fa-play"></i> 
+                         </div>
+                         <h4>Jak zrobić domowy wulkan</h4>
+                         <div class="meta-data">
+                            <span class="idioma" aria-label="Idioma: Polaco">🇵🇱</span>
+                            <span class="dificultad" aria-label="Nivel: Básico">Nivel: Básico</span>
+                            <span class="fecha-publicacion" aria-label="Publicado el">08 de septiembre, 2025</span>
+                         </div>
+                      </a>
+                   </div>
+                </div>
+        
+            <hr class="separador">
+
+                <div class="organizaciones-subapartado">
+                   <h3>Organizaciones Oficiales</h3>
+                   <p class="subapartado-descripcion">Recursos confiables y enlaces a instituciones de prestigio para profundizar.</p>
+                   <div class="contenedor-banners">
+                   
+                    <a href="https://www.rseq.org/" target="_blank" class="banner-card">
+                      <img src="Imagenes/rseq.jpg" alt="Logo de la Real Sociedad Española de Química">
+                      <h4>RSEQ</h4>
+                      <p>Real Sociedad Española de Química</p>
+                   </a>
+                   <a href="https://www.iupac.org/" target="_blank" class="banner-card">
+                      <img src="Imagenes/iupsv.png" alt="Logo de la organización">
+                      <h4>IUPAC</h4>
+                      <p>Unión Internacional de Química Pura y Aplicada</p>
+                   </a>
+
+                   <a href="https://www.iupac.org/" target="_blank" class="banner-card">
+                      <img src="Imagenes/" alt="Logo de la organización">
+                      <h4>IUPAC</h4>
+                      <p>Unión Internacional de Química Pura y Aplicada</p>
+                   </a>
+
+
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p> &copy; 2025 CienciAhora | 
+                <a href="mailto:materia.ciencia@gmail.com">cienciahora@gmail.com</a>
+            </p>
+            <div class="social-icons">
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.researchgate.net" target="_blank" aria-label="ResearchGate"><i class="fas fa-flask"></i></a>
+                <a href="https://scholar.google.com" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="www.agenciasinc.es" target="_blank" aria-label="Agencia SINC"><i class="fas fa-microscope"></i></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="form-body">
+
+    <div class="wrapper">
+        <header>
+            <div class="logo">CienciAhora</div>
+            <nav class="underline-nav">
+                    <a href="index.html">Inicio</a>
+                    <a href="destacados">Categorías</a>
+                    <a href="#">Artículos destacados</a>
+                    <a href="#">Comunidad</a>
+                    <a href="#">Contacto</a>
+                    <a href="formulario.html">Iniciar Sesión </a>
+                    <ul>
+                       <li>
+                          <select name="idioma" id="selector-idioma" aria-label="Selector de idioma">
+                              <option value="es" selected> ES Español</option>
+                              <option value="en"> EN English</option>
+                              <option value="fr"> FR Français</option>
+                              <option value="de"> DE Deutsch</option>
+                              <option value="pl"> PL Polski </option>
+                              <option value="ru"> RU Русский</option>
+                              <option value="zh"> 中文</option>
+                              <option value="ja"> 日本語</option> 
+                              <option value="ar"> AR العربية</option>
+                          </select>
+                       </li>
+                    </ul>
+            </nav>
+        </header>
+        <main class="form-main">
+        <div class="formulario-container" id="formulario-container">
+            <div class="form-container sign-up">
+                <form>
+                  <h1>Crear Cuenta</h1>
+                  <div class="social-icons">
+                      <a href="#" class="icon"><i class="fab fa-google-plus-g"></i></a>
+                      <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+                  </div>
+    
+                  <span> O usa tu correo para registrarte</span>
+                  <input type="text" placeholder="Nombre" required>
+                  <input type="email" placeholder="Email" required>
+                  <input type="password" placeholder="Contraseña" required>
+                  <button>Registrarse</button>
+
+                </form>
+            </div>
+        
+            <h1>Inicio de sesión</h1>
+            <div class="form-container sign-in">
+            <form>
+                <h1>Iniciar Sesión</h1>
+                <div class="social-icons-formulario">
+                    <a href="#" class="icon"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+                </div>
+    
+                <span> O usa la contraseña de tu correo</span>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Contraseña" required>
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <button>Iniciar Sesión</button>
+            </form>
+            </div>
+            <div class="toggle-container-formulario">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left" >
+                   <h1>¿Ya tienes una cuenta?</h1>
+                   <p>Inicia sesión para acceder a tu cuenta</p>
+                   <button class="hidden" id="register">Iniciar Sesión</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                   <h1>¿Eres nuevo aquí?</h1>
+                   <p>Regístrate para obtener acceso a todas las funciones</p>
+                   <button class="hidden" id="login">Registrarse</button>
+               </div>
+            </div>
+            </div>
+        </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 CienciAhora | 
+                <a href="mailto:materia.ciencia@gmail.com">cienciahora@gmail.com</a>
+            </p>
+            <div class="social-icons">
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.researchgate.net" target="_blank" aria-label="ResearchGate"><i class="fas fa-flask"></i></a>
+                <a href="https://scholar.google.com" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="www.agenciasinc.es" target="_blank" aria-label="Agencia SINC"><i class="fas fa-microscope"></i></a>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+   

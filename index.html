@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CienciAhora: plataforma de divulgación científica con artículos, materiales educativos y comunidad.">
+    <meta name="keywords" content="ciencia, materiales, física, química, biología, astronomía, tecnología">
+
+    <title>CienciAhora</title> 
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">CienciAhora</div>
+            <nav class="underline-nav">
+                    <a href="index.html">Inicio</a>
+                    <a href="destacados.html">Categorías</a>
+                    <a href="articulos_destacados.html">Artículos destacados</a>
+                    <a href="comunidad.html">Comunidad</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="formulario.html">Iniciar Sesión </a>
+                    <ul>
+                    <li>  
+                    <select name="idioma" id="selector-idioma" aria-label="Selector de idioma">
+                        <option value="es" selected> ES Español</option>
+                        <option value="en"> EN English</option>
+                        <option value="fr"> FR Français</option>
+                            <option value="de"> DE Deutsch</option>
+                            <option value="pl"> PL Polski </option>
+                            <option value="ru"> RU Русский</option>
+                    </select>
+                    </li>  
+                    </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="hero">
+                <img src="Imagenes/hero.png" alt="Imagen de ciencia de materiales con microscopio y tubos de ensayo" class="hero-img">
+                <h1 id="titulo">Explora el mundo de la ciencia</h1>
+                <p id="subtitulo">Descubre, aprende y comparte conocimiento científico.</p>
+                
+                <div class="buscador-hero">
+                    <input type="text" id="input-busqueda" placeholder="¿Qué quieres encontrar?">
+                    <button class="btn" onclick="buscar()">Buscar</button>
+                </div>
+            </section>
+            <section class="estadísticas"> 
+                <div class="contador-item">
+                    <h3>Artículos</h3>
+                    <p id="contador-articulos">0</p>
+                </div>
+                <div class="contador-item">
+                    <h3>Videos</h3>
+                    <p id="contador-videos">0</p>
+                </div>
+                <div class="contador-item">
+                    <h3>Colaboradores</h3>
+                    <p id="contador-colaboradores">0</p>
+                </div>
+            </section>
+
+            
+            <section class="destacados">
+                <h3>¿Qué encontrarás aquí?</h3>
+                <div class="cards">
+                    <div class="card"> 
+                        <a href="quimica.html">
+                        <img src="Imagenes/materiales.jpg" alt="Ilustración de diferentes tipos de materiales y sus propiedades">
+                        </a>
+                        <h4>Química</h4>
+                        <p>El mundo microscópico de los átomos</p>
+                    </div>
+                    <div class="card">
+                        <a href="tecnologia.html">
+                        <img src="Imagenes/tecnologia.jpg" alt="Avances científicos en ciencia de materiales">
+                        </a>
+                        <h4>Tecnología</h4>
+                        <p>Innovación y futuro </p>
+                    </div>
+                    <div class="card">
+                        <a href="biologia.html">
+                        <img src="Imagenes/biologia.jpg" alt="Imagen que representa la divulgación científica de manera accesible">
+                        </a>
+                        <h4>Biología</h4>
+                        <p>La ciencia de la vida </p>
+                    </div>
+                     <div class="card">
+                        <a href="astronomia.html">
+                        <img src="Imagenes/astronomia.jpg" alt="Ilustración de diferentes tipos de materiales y sus propiedades">
+                        </a>
+                        <h4>Astronomía</h4>
+                        <p>EL universo y sus misterios.</p>
+                    </div>
+                     <div class="card">
+                        <a href="fisica.html">
+                        <img src="Imagenes/fisica_imagen_principal.jpg" alt="Ilustración de diferentes tipos de materiales y sus propiedades">
+                    </a>
+                        <h4>Física</h4>
+                        <p>La ciencia que estudia las leyes del universo.</p>
+                    </div>
+                     <div class="card">
+                        <a href="medicina.html">
+                        <img src="Imagenes/medicina.jpg" alt="Ilustración de diferentes tipos de materiales y sus propiedades">
+                    </a>
+                        <h4>Medicina</h4>
+                        <p>La ciencia de la salud y el bienestar.</p>
+                    </div>
+                </div>
+            </section>
+        
+    <section class="articulos-recientes">
+        <h2>Artículos Recientes</h2>
+        <div class="contenedor-articulos">
+            <article class="articulo-card">
+                <img src="Imagenes/grafeno1.jpg" alt="Descripción de la imagen del artículo">
+                <div class="articulo-contenido">
+                    <h4>El grafeno</h4>
+                    <p>Propiedades y aplicaciones del grafeno en la ciencia de materiales.</p>
+                    <span class="fecha">25 de agosto de 2025</span>
+                    <a href="#" class="btn-leer-mas">Leer más</a>
+                </div>
+            </article>
+            <article class="articulo-card">
+                <img src="Imagenes/kevlar.jpg" alt="Descripción de la imagen del artículo">
+                <div class="articulo-contenido">
+                    <h4>Kevlar</h4>
+                    <p>Propiedades y aplicaciones del Kevlar en la ciencia de materiales.</p>
+                    <span class="fecha">25 de agosto de 2025</span>
+                    <a href="#" class="btn-leer-mas">Leer más</a>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="colaboradores-futuros">
+    <h3>¡Conoce a la comunidad de CienciAhora!</h3>
+    <p>Estas son las mentes curiosas y creativas que han hecho posible este proyecto:</p>
+    <div class="contenedor-colaboradores">
+        <div class="colaborador-card">
+            <img src="Imagenes/medialab.jpg" alt="Foto del colaborador">
+            <h4>MediaLab </h4>
+            <p>"UNIOVI Escuela Politécnica de Ingeniería de Gijón"</p>
+        </div>
+        <div class="colaborador-card">
+            <img src="Imagenes/miguelhabtu.jpg" alt="Foto del colaborador">
+            <h4>Miguel Habtu </h4>
+            <p>"Estudiante de bachillerato apasionado por los nuevos materiales."</p>
+        </div>
+        <div class="colaborador-card">
+            <img src="Imagenes/miguelhabtu.jpg" alt="Foto del colaborador">
+            <h4>Miguel Habtu </h4>
+            <p>"Estudiante de bachillerato apasionado por los nuevos materiales."</p>
+        </div>
+     </div>
+     </section>
+
+     </main>
+
+        <footer>
+            <p>&copy; 2025 CienciAhora | 
+                <a href="mailto:materia.ciencia@gmail.com">cienciahora@gmail.com</a>
+            </p>
+            <div class="social-icons">
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.researchgate.net" target="_blank" aria-label="ResearchGate"><i class="fas fa-flask"></i></a>
+                <a href="https://scholar.google.com" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="www.agenciasinc.es" target="_blank" aria-label="Agencia SINC"><i class="fas fa-microscope"></i></a>
+            </div>
+        </footer>
+    </div>
+ <script type="module">
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+apiKey: "AIzaSyCqL4N-5QXW0BwjJLxXqu61Q7lRPYLTdhc",
+authDomain: "cienciahora-dda40.firebaseapp.com",
+projectId: "cienciahora-dda40",
+storageBucket: "cienciahora-dda40.firebasestorage.app",
+messagingSenderId: "202012338284",
+appId: "1:202012338284:web:668dc813aa62a479689049",
+measurementId: "G-NHH3S7LNTG"
+};
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>
