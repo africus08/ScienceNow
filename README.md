@@ -1,28 +1,23 @@
-# Nombre de tu Proyecto 🚀
+### CienciAhora
+<p>
 
-Breve descripción de una o dos líneas sobre qué problema resuelve tu aplicación.
+</p>
+- Support Standard Markdown / CommonMark and GFM(GitHub Flavored Markdown);
+- Full-featured: Real-time Preview, Image (cross-domain) upload, Preformatted text/Code blocks/Tables insert, Code fold, Search replace, Read only, Themes, Multi-languages, L18n, HTML entities, Code syntax highlighting...;
+- Markdown Extras : Support ToC (Table of Contents), Emoji, Task lists, @Links...;
+- Compatible with all major browsers (IE8+), compatible Zepto.js and iPad;
+- Support identification, interpretation, fliter of the HTML tags;
+- Support TeX (LaTeX expressions, Based on KaTeX), Flowchart and Sequence Diagram of Markdown extended syntax;
+- Support AMD/CMD (Require.js & Sea.js) Module Loader, and Custom/define editor plugins;
 
-## 🛠️ Tecnologías utilizadas
-* **Lenguaje:** Python 3.9
-* **Framework:** Flask
-* **Base de datos:** SQLite
+# README.md
 
-## 🚀 Instalación
+![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
 
-Sigue estos pasos para tener una copia del proyecto funcionando localmente:
+![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
 
-1. Clona el repositorio:
-   git clone https://github.com/tu-usuario/tu-proyecto.git
 
-2. Entra a la carpeta:
-   cd tu-proyecto
+``
+git-close
+``
 
-3. Instala las dependencias:
-   pip install -r requirements.txt
-
-## 💻 Uso
-Para ejecutar la aplicación, usa el siguiente comando:
-python main.py
-
-## 📄 Licencia
-Este proyecto está bajo la Licencia EUPL 1.2.
