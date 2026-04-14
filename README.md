@@ -54,6 +54,8 @@ Then open `index.html` in your browser to view the website.
 - `script.js` - JavaScript functionality
 - `Imagenes/` - Image assets
 
+## Project preview
+![](https://github.com/africus08/ScienceNow/blob/main/Imagenes/paginaweb1.png)
 ## License
 
 [Your License Here]
