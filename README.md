@@ -57,8 +57,7 @@ Then open `index.html` in your browser to view the website.
 ## Project preview
 ![](https://github.com/africus08/ScienceNow/blob/main/Imagenes/paginaweb1.png)
 ## License
-
-[Your License Here]
+This project is licensed under the European Union Public Licence (EUPL) v. 1.2 - see the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
