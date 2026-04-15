@@ -146,39 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderizarVideos(videosDeQuimica);
 });
 
-// Traductor de Texto
-document.addEventListener("DOMContentLoaded", () => {
-    const translateBtn = document.getElementById('translate-btn');
-    if (translateBtn) {
-        translateBtn.addEventListener('click', async () => {
-            const text = document.getElementById('input-text').value;
-            const source = document.getElementById('source-lang').value;
-            const target = document.getElementById('target-lang').value;
-            if (!text) {
-                alert('Ingresa texto para traducir.');
-                return;
-            }
-            try {
-                const response = await fetch('https://libretranslate.com/translate', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        q: text,
-                        source: source,
-                        target: target,
-                    }),
-                });
-                const data = await response.json();
-                document.getElementById('output-text').textContent = data.translatedText;
-            } catch (error) {
-                console.error('Error:', error);
-                document.getElementById('output-text').textContent = 'Error al traducir.';
-            }
-        });
-    }
-});
+
 
 document.addEventListener("DOMContentLoaded", () => {
     // ... tu código existente ...
