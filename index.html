@@ -15,12 +15,12 @@
         <header>
             <div class="logo">CienciAhora</div>
             <nav class="underline-nav">
-                    <a href="index.html">Inicio</a>
-                    <a href="destacados.html">Categorías</a>
-                    <a href="articulos_destacados.html">Artículos destacados</a>
-                    <a href="comunidad.html">Comunidad</a>
-                    <a href="contacto.html">Contacto</a>
-                    <a href="formulario.html">Iniciar Sesión </a>
+                    <a href="index.html" id="nav-inicio">Inicio</a>
+                    <a href="destacados.html" id="nav-categorias">Categorías</a>
+                    <a href="articulos_destacados.html" id="nav-articulos">Artículos destacados</a>
+                    <a href="comunidad.html" id="nav-comunidad">Comunidad</a>
+                    <a href="contacto.html" id="nav-contacto">Contacto</a>
+                    <a href="formulario.html" id="nav-iniciar">Iniciar Sesión </a>
                     <ul>
                     <li>  
                     <select name="idioma" id="selector-idioma" aria-label="Selector de idioma">
@@ -41,122 +41,121 @@
                 
                 <div class="buscador-hero">
                     <input type="text" id="input-busqueda" placeholder="¿Qué quieres encontrar?">
-                    <button class="btn" onclick="buscar()">Buscar</button>
+                    <button class="btn" id="btn-buscar" onclick="buscar()">Buscar</button>
                 </div>
             </section>
             <section class="estadísticas"> 
                 <div class="contador-item">
-                    <h3>Artículos</h3>
+                    <h3 id="stat-articulos">Artículos</h3>
                     <p id="contador-articulos">0</p>
                 </div>
                 <div class="contador-item">
-                    <h3>Videos</h3>
+                    <h3 id="stat-videos">Videos</h3>
                     <p id="contador-videos">0</p>
                 </div>
                 <div class="contador-item">
-                    <h3>Colaboradores</h3>
+                    <h3 id="stat-colaboradores">Colaboradores</h3>
                     <p id="contador-colaboradores">0</p>
                 </div>
             </section>
 
             
             <section class="destacados">
-                <h3>¿Qué encontrarás aquí?</h3>
+                <h3 id="que-encontraras">¿Qué encontrarás aquí?</h3>
                 <div class="cards">
                     <div class="card"> 
                         <a href="quimica.html">
                         <img src="Imagenes/materiales.jpg" alt="Ilustración de diferentes tipos de materiales y sus propiedades">
                         </a>
-                        <h4>Química</h4>
-                        <p>El mundo microscópico de los átomos</p>
+                        <h4 id="card-quimica">Química</h4>
+                        <p id="desc-quimica">El mundo microscópico de los átomos</p>
                     </div>
                     <div class="card">
                         <a href="tecnologia.html">
                         <img src="Imagenes/tecnologia.jpg" alt="Avances científicos en ciencia de materiales">
                         </a>
-                        <h4>Tecnología</h4>
-                        <p>Innovación y futuro </p>
+                        <h4 id="card-tecnologia">Tecnología</h4>
+                        <p id="desc-tecnologia">Innovación y futuro </p>
                     </div>
                     <div class="card">
                         <a href="biologia.html">
                         <img src="Imagenes/biologia.jpg" alt="Imagen que representa la divulgación científica de manera accesible">
                         </a>
-                        <h4>Biología</h4>
-                        <p>La ciencia de la vida </p>
+                        <h4 id="card-biologia">Biología</h4>
+                        <p id="desc-biologia">La ciencia de la vida </p>
                     </div>
                      <div class="card">
                         <a href="astronomia.html">
                         <img src="Imagenes/astronomia.jpg" alt="Ilustración de diferentes tipos de materiales y sus propiedades">
                         </a>
-                        <h4>Astronomía</h4>
-                        <p>EL universo y sus misterios.</p>
+                        <h4 id="card-astronomia">Astronomía</h4>
+                        <p id="desc-astronomia">EL universo y sus misterios.</p>
                     </div>
                      <div class="card">
                         <a href="fisica.html">
                         <img src="Imagenes/fisica_imagen_principal.jpg" alt="Ilustración de diferentes tipos de materiales y sus propiedades">
                     </a>
-                        <h4>Física</h4>
-                        <p>La ciencia que estudia las leyes del universo.</p>
+                        <h4 id="card-fisica">Física</h4>
+                        <p id="desc-fisica">La ciencia que estudia las leyes del universo.</p>
                     </div>
                      <div class="card">
                         <a href="medicina.html">
                         <img src="Imagenes/medicina.jpg" alt="Ilustración de diferentes tipos de materiales y sus propiedades">
                     </a>
-                        <h4>Medicina</h4>
-                        <p>La ciencia de la salud y el bienestar.</p>
+                        <h4 id="card-medicina">Medicina</h4>
+                        <p id="desc-medicina">La ciencia de la salud y el bienestar.</p>
                     </div>
                 </div>
             </section>
         
     <section class="articulos-recientes">
-        <h2>Artículos Recientes</h2>
+        <h2 id="articulos-recientes">Artículos Recientes</h2>
         <div class="contenedor-articulos">
             <article class="articulo-card">
                 <img src="Imagenes/grafeno1.jpg" alt="Descripción de la imagen del artículo">
                 <div class="articulo-contenido">
-                    <h4>El grafeno</h4>
-                    <p>Propiedades y aplicaciones del grafeno en la ciencia de materiales.</p>
-                    <span class="fecha">25 de agosto de 2025</span>
-                    <a href="#" class="btn-leer-mas">Leer más</a>
+                    <h4 id="art-grafeno">El grafeno</h4>
+                    <p id="desc-grafeno">Propiedades y aplicaciones del grafeno en la ciencia de materiales.</p>
+                    <span class="fecha" id="fecha-grafeno">25 de agosto de 2025</span>
+                    <a href="#" class="btn-leer-mas" id="leer-grafeno">Leer más</a>
                 </div>
             </article>
             <article class="articulo-card">
                 <img src="Imagenes/kevlar.jpg" alt="Descripción de la imagen del artículo">
                 <div class="articulo-contenido">
-                    <h4>Kevlar</h4>
-                    <p>Propiedades y aplicaciones del Kevlar en la ciencia de materiales.</p>
-                    <span class="fecha">25 de agosto de 2025</span>
-                    <a href="#" class="btn-leer-mas">Leer más</a>
+                    <h4 id="art-kevlar">Kevlar</h4>
+                    <p id="desc-kevlar">Propiedades y aplicaciones del Kevlar en la ciencia de materiales.</p>
+                    <span class="fecha" id="fecha-kevlar">25 de agosto de 2025</span>
+                    <a href="#" class="btn-leer-mas" id="leer-kevlar">Leer más</a>
                 </div>
             </article>
         </div>
     </section>
     <section class="colaboradores-futuros">
-    <h3>¡Conoce a la comunidad de CienciAhora!</h3>
-    <p>Estas son las mentes curiosas y creativas que han hecho posible este proyecto:</p>
+    <h3 id="conoce-comunidad">¡Conoce a la comunidad de CienciAhora!</h3>
+    <p id="mentes-curiosas">Estas son las mentes curiosas y creativas que han hecho posible este proyecto:</p>
     <div class="contenedor-colaboradores">
         <div class="colaborador-card">
             <img src="Imagenes/medialab.jpg" alt="Foto del colaborador">
-            <h4>MediaLab </h4>
-            <p>"UNIOVI Escuela Politécnica de Ingeniería de Gijón"</p>
+            <h4 id="colab-medialab">MediaLab </h4>
+            <p id="desc-medialab">"UNIOVI Escuela Politécnica de Ingeniería de Gijón"</p>
         </div>
         <div class="colaborador-card">
             <img src="Imagenes/miguelhabtu.jpg" alt="Foto del colaborador">
-            <h4>Miguel Habtu </h4>
-            <p>"Estudiante de bachillerato apasionado por los nuevos materiales."</p>
+            <h4 id="colab-miguel1">Miguel Habtu </h4>
+            <p id="desc-miguel1">"Estudiante de bachillerato apasionado por los nuevos materiales."</p>
         </div>
         <div class="colaborador-card">
             <img src="Imagenes/miguelhabtu.jpg" alt="Foto del colaborador">
-            <h4>Miguel Habtu </h4>
-            <p>"Estudiante de bachillerato apasionado por los nuevos materiales."</p>
-        </div>
+            <h4 id="colab-miguel2">Miguel Habtu </h4>
+            <p id="desc-miguel2">"Estudiante de bachillerato apasionado por los nuevos materiales."</p>
      </div>
      </section>
 
      </main>
 
         <footer>
-            <p>&copy; 2025 CienciAhora | 
+            <p id="footer-text">&copy; 2025 CienciAhora | 
                 <a href="mailto:materia.ciencia@gmail.com">cienciahora@gmail.com</a>
             </p>
             <div class="social-icons">
