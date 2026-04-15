@@ -476,6 +476,68 @@ footer a:hover {
 }
 
 /* =================================== */
+/* Estilos del Traductor               */
+/* =================================== */
+.translator-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--color-tarjeta);
+    border-radius: 8px;
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.translator-container h2 {
+    margin-bottom: 15px;
+    color: var(--color-principal);
+}
+
+#input-text {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.lang-selectors {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.lang-selectors select {
+    flex: 1;
+    margin: 0 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#translate-btn {
+    background: var(--color-secundario);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#translate-btn:hover {
+    background: var(--color-principal);
+}
+
+.output {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 50px;
+    background: var(--color-fondo-medio);
+}
+
+/* =================================== */
 /* Estilos Responsive                  */
 /* =================================== */
 @media (max-width: 768px) {
