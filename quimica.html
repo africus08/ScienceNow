@@ -12,12 +12,12 @@
          <header>
             <div class="logo">CienciAhora</div>
             <nav class="underline-nav">
-                    <a href="index.html">Inicio</a>
-                    <a href="destacados">Categorías</a>
-                    <a href="#">Artículos destacados</a>
-                    <a href="#">Comunidad</a>
-                    <a href="#">Contacto</a>
-                    <a href="formulario.html">Iniciar Sesión </a>
+                    <a href="index.html" id="nav-inicio">Inicio</a>
+                    <a href="destacados" id="nav-categorias">Categorías</a>
+                    <a href="#" id="nav-articulos">Artículos destacados</a>
+                    <a href="#" id="nav-comunidad">Comunidad</a>
+                    <a href="#" id="nav-contacto">Contacto</a>
+                    <a href="formulario.html" id="nav-iniciar">Iniciar Sesión </a>
                     <ul>
                     <li>
                         <select name="idioma" id="selector-idioma" aria-label="Selector de idioma">
@@ -33,9 +33,9 @@
         <main>
             
             <section class="categoria-seccion" id="quimica">
-                <h2>🔬 Química</h2>
+                <h2 id="titulo-quimica">🔬 Química</h2>
                 <section class="filtro-articulos">
-                    <h3>Encuentra el artículo perfecto</h3>
+                    <h3 id="encuentra-articulo">Encuentra el artículo perfecto</h3>
                     <form id="formulario-buscador">
 
                         <div class="grupo-filtro">
@@ -66,13 +66,13 @@
                  </section>
 
                 <div class="articulos-subapartado">
-                   <h3>Artículos</h3>
+                   <h3 id="articulos-quimica">Artículos</h3>
                    <div class="articulos-quimica-contenedor-elementos">
                       <article class="articulo-card-quimica">
                          <img src="Imagenes/tabla_periodica.jpg" alt="Imagen del artículo de Química">
                          <div class="articulo-quimica-contenido">
-                            <h4>La magia de la tabla periódica</h4>
-                            <p>Un recorrido fascinante por la historia y secretos de los elementos...</p>
+                            <h4 id="art-tabla">La magia de la tabla periódica</h4>
+                            <p id="desc-tabla">Un recorrido fascinante por la historia y secretos de los elementos...</p>
                             <div class="meta-data">
                                <span class="dificultad" aria-label="Nivel: Básico">Nivel: Básico</span>
                                <span class="fecha-publicacion" aria-label="Publicado el"> 08 de septiembre, 2025</span>
@@ -84,8 +84,8 @@
                       <article class="articulo-card-quimica">
                          <img src="Imagenes/enlaces.png" alt="Imagen del artículo de Química">
                          <div class="articulo-quimica-contenido">
-                            <h4>Explorando los enlaces químicos</h4>
-                            <p>Una guía para entender cómo se forman los compuestos</p>
+                            <h4 id="art-enlaces">Explorando los enlaces químicos</h4>
+                            <p id="desc-enlaces">Una guía para entender cómo se forman los compuestos</p>
                             <div class="meta-data">
                                <span class="dificultad" aria-label="Nivel: Básico">Nivel: Básico</span>
                                <span class="fecha-publicacion" aria-label="Publicado el"> 08 de septiembre, 2025</span>
@@ -97,8 +97,8 @@
                       <article class="articulo-card-quimica">
                          <img src="Imagenes/reacciones.png" alt="Imagen del artículo de Química">
                          <div class="articulo-quimica-contenido">
-                            <h4>Explorando las reacciones químicas</h4>
-                            <p>Una guía para entender cómo se producen las reacciones químicas</p>
+                            <h4 id="art-reacciones">Explorando las reacciones químicas</h4>
+                            <p id="desc-reacciones">Una guía para entender cómo se producen las reacciones químicas</p>
                             <div class="meta-data">
                                <span class="dificultad" aria-label="Nivel: Básico">Nivel: Básico</span>
                                <span class="fecha-publicacion" aria-label="Publicado el"> 08 de septiembre, 2025</span>
@@ -112,8 +112,8 @@
             <hr class="separador">
 
                 <div class="videos-quimica-subapartado">
-                   <h3>Videos </h3>
-                   <p class="videos-quimica-subapartado-descripcion">Videos educativos y experimentos caseros para entender mejor la química.</p>
+                   <h3 id="videos-quimica">Videos </h3>
+                   <p id="desc-videos-quimica">Videos educativos y experimentos caseros para entender mejor la química.</p>
                    
                    <div class="videos-quimica-contenedor-elementos">
                       <a href="https://youtu.be/PPZfaO3TPf0?si=fBw5qjIPeWaWG8lc" target="_blank" class="video-card">
@@ -121,7 +121,7 @@
                          <div class="video-quimica-card-overlay">
                             <i class="fas fa-play"></i> 
                          </div>
-                         <h4>Cómo hacer un volcán casero</h4>
+                         <h4 id="video-volcan">Cómo hacer un volcán casero</h4>
                          <div class="meta-data">
                             <span class="idioma" aria-label="Idioma: Español">🇪s</span>
                             <span class="dificultad" aria-label="Nivel: Intermedio"> Nivel: Intermedio</span>
@@ -136,7 +136,7 @@
                          <div class="video-quimica-card-overlay">
                             <i class="fas fa-play"></i> 
                          </div>
-                         <h4>Map of chemistry</h4>
+                         <h4 id="video-map">Map of chemistry</h4>
                          <div class="meta-data">
                             <span class="idioma" aria-label="Idioma: Inglés">🇬🇧</span>
                             <span class="dificultad" aria-label="Nivel: Básico">Nivel: Básico</span>

@@ -44,7 +44,30 @@ const translations = {
         descMiguel1: "\"Estudiante de bachillerato apasionado por los nuevos materiales.\"",
         colabMiguel2: "Miguel Habtu",
         descMiguel2: "\"Estudiante de bachillerato apasionado por los nuevos materiales.\"",
-        footerText: "&copy; 2025 CienciAhora | cienciahora@gmail.com"
+        footerText: "&copy; 2025 CienciAhora | cienciahora@gmail.com",
+        // Biología
+        tituloPaginaBiologia: "Biología",
+        introBiologia: "Bienvenido a la sección de Biología de CienciAhora. Aquí encontrarás artículos, noticias y recursos sobre los últimos avances en biología, investigaciones científicas y su impacto en el mundo natural.",
+        artAdn: "El ADN y su Papel en la Herencia",
+        descAdn: "El ácido desoxirribonucleico (ADN) es la molécula que contiene la información genética de los seres vivos. Aprende sobre su estructura, función y cómo se transmite de generación en generación.",
+        artEcologia: "Ecología: Entendiendo los Ecosistemas",
+        descEcologia: "La ecología estudia las interacciones entre los organismos y su entorno. Descubre cómo funcionan los ecosistemas y la importancia de conservar la biodiversidad para el equilibrio del planeta.",
+        artBiotecnologia: "Biotecnología: Innovaciones para el Futuro",
+        descBiotecnologia: "La biotecnología utiliza organismos vivos para desarrollar productos y tecnologías que mejoran nuestra vida. Explora las aplicaciones de la biotecnología en medicina, agricultura y medio ambiente.",
+        // Química
+        tituloQuimica: "🔬 Química",
+        encuentraArticulo: "Encuentra el artículo perfecto",
+        articulosQuimica: "Artículos",
+        artTabla: "La magia de la tabla periódica",
+        descTabla: "Un recorrido fascinante por la historia y secretos de los elementos...",
+        artEnlaces: "Explorando los enlaces químicos",
+        descEnlaces: "Una guía para entender cómo se forman los compuestos",
+        artReacciones: "Explorando las reacciones químicas",
+        descReacciones: "Una guía para entender cómo se producen las reacciones químicas",
+        videosQuimica: "Videos",
+        descVideosQuimica: "Videos educativos y experimentos caseros para entender mejor la química.",
+        videoVolcan: "Cómo hacer un volcán casero",
+        videoMap: "Map of chemistry"
     },
     en: {
         navInicio: "Home",
@@ -90,7 +113,30 @@ const translations = {
         descMiguel1: "\"High school student passionate about new materials.\"",
         colabMiguel2: "Miguel Habtu",
         descMiguel2: "\"High school student passionate about new materials.\"",
-        footerText: "&copy; 2025 CienciAhora | cienciahora@gmail.com"
+        footerText: "&copy; 2025 CienciAhora | cienciahora@gmail.com",
+        // Biología
+        tituloPaginaBiologia: "Biology",
+        introBiologia: "Welcome to the Biology section of CienciAhora. Here you will find articles, news and resources on the latest advances in biology, scientific research and their impact on the natural world.",
+        artAdn: "DNA and Its Role in Inheritance",
+        descAdn: "Deoxyribonucleic acid (DNA) is the molecule that contains the genetic information of living beings. Learn about its structure, function and how it is transmitted from generation to generation.",
+        artEcologia: "Ecology: Understanding Ecosystems",
+        descEcologia: "Ecology studies the interactions between organisms and their environment. Discover how ecosystems work and the importance of conserving biodiversity for the planet's balance.",
+        artBiotecnologia: "Biotechnology: Innovations for the Future",
+        descBiotecnologia: "Biotechnology uses living organisms to develop products and technologies that improve our lives. Explore the applications of biotechnology in medicine, agriculture and the environment.",
+        // Química
+        tituloQuimica: "🔬 Chemistry",
+        encuentraArticulo: "Find the perfect article",
+        articulosQuimica: "Articles",
+        artTabla: "The magic of the periodic table",
+        descTabla: "A fascinating journey through the history and secrets of the elements...",
+        artEnlaces: "Exploring chemical bonds",
+        descEnlaces: "A guide to understanding how compounds are formed",
+        artReacciones: "Exploring chemical reactions",
+        descReacciones: "A guide to understanding how chemical reactions occur",
+        videosQuimica: "Videos",
+        descVideosQuimica: "Educational videos and home experiments to better understand chemistry.",
+        videoVolcan: "How to make a homemade volcano",
+        videoMap: "Map of chemistry"
     },
     fr: {
         navInicio: "Accueil",
@@ -136,7 +182,30 @@ const translations = {
         descMiguel1: "\"Étudiant au lycée passionné par les nouveaux matériaux.\"",
         colabMiguel2: "Miguel Habtu",
         descMiguel2: "\"Étudiant au lycée passionné par les nouveaux matériaux.\"",
-        footerText: "&copy; 2025 CienciAhora | cienciahora@gmail.com"
+        footerText: "&copy; 2025 CienciAhora | cienciahora@gmail.com",
+        // Biología
+        tituloPaginaBiologia: "Biologie",
+        introBiologia: "Bienvenue dans la section Biologie de CienciAhora. Ici, vous trouverez des articles, des nouvelles et des ressources sur les dernières avancées en biologie, les recherches scientifiques et leur impact sur le monde naturel.",
+        artAdn: "L'ADN et son rôle dans l'hérédité",
+        descAdn: "L'acide désoxyribonucléique (ADN) est la molécule qui contient l'information génétique des êtres vivants. Apprenez sur sa structure, sa fonction et comment elle se transmet de génération en génération.",
+        artEcologia: "Écologie : Comprendre les écosystèmes",
+        descEcologia: "L'écologie étudie les interactions entre les organismes et leur environnement. Découvrez comment fonctionnent les écosystèmes et l'importance de conserver la biodiversité pour l'équilibre de la planète.",
+        artBiotecnologia: "Biotechnologie : Innovations pour l'avenir",
+        descBiotecnologia: "La biotechnologie utilise des organismes vivants pour développer des produits et des technologies qui améliorent notre vie. Explorez les applications de la biotechnologie en médecine, agriculture et environnement.",
+        // Química
+        tituloQuimica: "🔬 Chimie",
+        encuentraArticulo: "Trouvez l'article parfait",
+        articulosQuimica: "Articles",
+        artTabla: "La magie de la table périodique",
+        descTabla: "Un voyage fascinant à travers l'histoire et les secrets des éléments...",
+        artEnlaces: "Explorer les liaisons chimiques",
+        descEnlaces: "Un guide pour comprendre comment les composés se forment",
+        artReacciones: "Explorer les réactions chimiques",
+        descReacciones: "Un guide pour comprendre comment les réactions chimiques se produisent",
+        videosQuimica: "Vidéos",
+        descVideosQuimica: "Vidéos éducatives et expériences à domicile pour mieux comprendre la chimie.",
+        videoVolcan: "Comment faire un volcan maison",
+        videoMap: "Carte de la chimie"
     },
     de: {
         navInicio: "Startseite",
@@ -182,7 +251,30 @@ const translations = {
         descMiguel1: "\"Gymnasialschüler, leidenschaftlich an neuen Materialien interessiert.\"",
         colabMiguel2: "Miguel Habtu",
         descMiguel2: "\"Gymnasialschüler, leidenschaftlich an neuen Materialien interessiert.\"",
-        footerText: "&copy; 2025 CienciAhora | cienciahora@gmail.com"
+        footerText: "&copy; 2025 CienciAhora | cienciahora@gmail.com",
+        // Biología
+        tituloPaginaBiologia: "Biologie",
+        introBiologia: "Willkommen im Biologie-Bereich von CienciAhora. Hier finden Sie Artikel, Nachrichten und Ressourcen zu den neuesten Fortschritten in der Biologie, wissenschaftlichen Forschungen und ihrer Auswirkungen auf die natürliche Welt.",
+        artAdn: "DNA und ihre Rolle in der Vererbung",
+        descAdn: "Desoxyribonukleinsäure (DNA) ist das Molekül, das die genetische Information lebender Wesen enthält. Erfahren Sie mehr über ihre Struktur, Funktion und wie sie von Generation zu Generation weitergegeben wird.",
+        artEcologia: "Ökologie: Ökosysteme verstehen",
+        descEcologia: "Die Ökologie untersucht die Interaktionen zwischen Organismen und ihrer Umwelt. Entdecken Sie, wie Ökosysteme funktionieren und die Bedeutung des Erhalts der Biodiversität für das Gleichgewicht des Planeten.",
+        artBiotecnologia: "Biotechnologie: Innovationen für die Zukunft",
+        descBiotecnologia: "Die Biotechnologie nutzt lebende Organismen, um Produkte und Technologien zu entwickeln, die unser Leben verbessern. Erkunden Sie die Anwendungen der Biotechnologie in Medizin, Landwirtschaft und Umwelt.",
+        // Química
+        tituloQuimica: "🔬 Chemie",
+        encuentraArticulo: "Finden Sie den perfekten Artikel",
+        articulosQuimica: "Artikel",
+        artTabla: "Die Magie des Periodensystems",
+        descTabla: "Eine faszinierende Reise durch die Geschichte und Geheimnisse der Elemente...",
+        artEnlaces: "Erkundung chemischer Bindungen",
+        descEnlaces: "Ein Leitfaden zum Verständnis, wie Verbindungen gebildet werden",
+        artReacciones: "Erkundung chemischer Reaktionen",
+        descReacciones: "Ein Leitfaden zum Verständnis, wie chemische Reaktionen ablaufen",
+        videosQuimica: "Videos",
+        descVideosQuimica: "Bildungsvideos und Heimexperimente, um die Chemie besser zu verstehen.",
+        videoVolcan: "Wie man einen hausgemachten Vulkan macht",
+        videoMap: "Karte der Chemie"
     }
 };
 
@@ -236,6 +328,31 @@ function changeLanguage(lang) {
     document.getElementById('colab-miguel2').textContent = translations[lang].colabMiguel2;
     document.getElementById('desc-miguel2').textContent = translations[lang].descMiguel2;
     document.getElementById('footer-text').innerHTML = translations[lang].footerText;
+
+    // Biología
+    if (document.getElementById('titulo-pagina')) document.getElementById('titulo-pagina').textContent = translations[lang].tituloPaginaBiologia;
+    if (document.getElementById('intro-biologia')) document.getElementById('intro-biologia').textContent = translations[lang].introBiologia;
+    if (document.getElementById('art-adn')) document.getElementById('art-adn').textContent = translations[lang].artAdn;
+    if (document.getElementById('desc-adn')) document.getElementById('desc-adn').textContent = translations[lang].descAdn;
+    if (document.getElementById('art-ecologia')) document.getElementById('art-ecologia').textContent = translations[lang].artEcologia;
+    if (document.getElementById('desc-ecologia')) document.getElementById('desc-ecologia').textContent = translations[lang].descEcologia;
+    if (document.getElementById('art-biotecnologia')) document.getElementById('art-biotecnologia').textContent = translations[lang].artBiotecnologia;
+    if (document.getElementById('desc-biotecnologia')) document.getElementById('desc-biotecnologia').textContent = translations[lang].descBiotecnologia;
+
+    // Química
+    if (document.getElementById('titulo-quimica')) document.getElementById('titulo-quimica').textContent = translations[lang].tituloQuimica;
+    if (document.getElementById('encuentra-articulo')) document.getElementById('encuentra-articulo').textContent = translations[lang].encuentraArticulo;
+    if (document.getElementById('articulos-quimica')) document.getElementById('articulos-quimica').textContent = translations[lang].articulosQuimica;
+    if (document.getElementById('art-tabla')) document.getElementById('art-tabla').textContent = translations[lang].artTabla;
+    if (document.getElementById('desc-tabla')) document.getElementById('desc-tabla').textContent = translations[lang].descTabla;
+    if (document.getElementById('art-enlaces')) document.getElementById('art-enlaces').textContent = translations[lang].artEnlaces;
+    if (document.getElementById('desc-enlaces')) document.getElementById('desc-enlaces').textContent = translations[lang].descEnlaces;
+    if (document.getElementById('art-reacciones')) document.getElementById('art-reacciones').textContent = translations[lang].artReacciones;
+    if (document.getElementById('desc-reacciones')) document.getElementById('desc-reacciones').textContent = translations[lang].descReacciones;
+    if (document.getElementById('videos-quimica')) document.getElementById('videos-quimica').textContent = translations[lang].videosQuimica;
+    if (document.getElementById('desc-videos-quimica')) document.getElementById('desc-videos-quimica').textContent = translations[lang].descVideosQuimica;
+    if (document.getElementById('video-volcan')) document.getElementById('video-volcan').textContent = translations[lang].videoVolcan;
+    if (document.getElementById('video-map')) document.getElementById('video-map').textContent = translations[lang].videoMap;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
