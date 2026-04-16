@@ -277,87 +277,19 @@ const translations = {
         videoMap: "Karte der Chemie"
     }
 };
+/* 
+// Función para cambiar el idioma - YA NO NECESARIA (Elfsight maneja traducciones automáticamente)
+// Esta función se dejó como referencia pero está deshabilitada.
+// Los textos aún están en el objeto 'translations' si necesitas consultarlos.
 
-// Función para cambiar el idioma
 function changeLanguage(lang) {
-    // Guardar en localStorage
-    localStorage.setItem('language', lang);
-
-    // Actualizar elementos
-    document.getElementById('nav-inicio').textContent = translations[lang].navInicio;
-    document.getElementById('nav-categorias').textContent = translations[lang].navCategorias;
-    document.getElementById('nav-articulos').textContent = translations[lang].navArticulos;
-    document.getElementById('nav-comunidad').textContent = translations[lang].navComunidad;
-    document.getElementById('nav-contacto').textContent = translations[lang].navContacto;
-    document.getElementById('nav-iniciar').textContent = translations[lang].navIniciar;
-    document.getElementById('titulo').textContent = translations[lang].titulo;
-    document.getElementById('subtitulo').textContent = translations[lang].subtitulo;
-    document.getElementById('input-busqueda').placeholder = translations[lang].placeholderBusqueda;
-    document.getElementById('btn-buscar').textContent = translations[lang].btnBuscar;
-    document.getElementById('stat-articulos').textContent = translations[lang].statArticulos;
-    document.getElementById('stat-videos').textContent = translations[lang].statVideos;
-    document.getElementById('stat-colaboradores').textContent = translations[lang].statColaboradores;
-    document.getElementById('que-encontraras').textContent = translations[lang].queEncontraras;
-    document.getElementById('card-quimica').textContent = translations[lang].cardQuimica;
-    document.getElementById('desc-quimica').textContent = translations[lang].descQuimica;
-    document.getElementById('card-tecnologia').textContent = translations[lang].cardTecnologia;
-    document.getElementById('desc-tecnologia').textContent = translations[lang].descTecnologia;
-    document.getElementById('card-biologia').textContent = translations[lang].cardBiologia;
-    document.getElementById('desc-biologia').textContent = translations[lang].descBiologia;
-    document.getElementById('card-astronomia').textContent = translations[lang].cardAstronomia;
-    document.getElementById('desc-astronomia').textContent = translations[lang].descAstronomia;
-    document.getElementById('card-fisica').textContent = translations[lang].cardFisica;
-    document.getElementById('desc-fisica').textContent = translations[lang].descFisica;
-    document.getElementById('card-medicina').textContent = translations[lang].cardMedicina;
-    document.getElementById('desc-medicina').textContent = translations[lang].descMedicina;
-    document.getElementById('articulos-recientes').textContent = translations[lang].articulosRecientes;
-    document.getElementById('art-grafeno').textContent = translations[lang].artGrafeno;
-    document.getElementById('desc-grafeno').textContent = translations[lang].descGrafeno;
-    document.getElementById('fecha-grafeno').textContent = translations[lang].fechaGrafeno;
-    document.getElementById('leer-grafeno').textContent = translations[lang].leerGrafeno;
-    document.getElementById('art-kevlar').textContent = translations[lang].artKevlar;
-    document.getElementById('desc-kevlar').textContent = translations[lang].descKevlar;
-    document.getElementById('fecha-kevlar').textContent = translations[lang].fechaKevlar;
-    document.getElementById('leer-kevlar').textContent = translations[lang].leerKevlar;
-    document.getElementById('conoce-comunidad').textContent = translations[lang].conoceComunidad;
-    document.getElementById('mentes-curiosas').textContent = translations[lang].mentesCuriosas;
-    document.getElementById('colab-medialab').textContent = translations[lang].colabMedialab;
-    document.getElementById('desc-medialab').textContent = translations[lang].descMedialab;
-    document.getElementById('colab-miguel1').textContent = translations[lang].colabMiguel1;
-    document.getElementById('desc-miguel1').textContent = translations[lang].descMiguel1;
-    document.getElementById('colab-miguel2').textContent = translations[lang].colabMiguel2;
-    document.getElementById('desc-miguel2').textContent = translations[lang].descMiguel2;
-    document.getElementById('footer-text').innerHTML = translations[lang].footerText;
-
-    // Biología
-    if (document.getElementById('titulo-pagina')) document.getElementById('titulo-pagina').textContent = translations[lang].tituloPaginaBiologia;
-    if (document.getElementById('intro-biologia')) document.getElementById('intro-biologia').textContent = translations[lang].introBiologia;
-    if (document.getElementById('art-adn')) document.getElementById('art-adn').textContent = translations[lang].artAdn;
-    if (document.getElementById('desc-adn')) document.getElementById('desc-adn').textContent = translations[lang].descAdn;
-    if (document.getElementById('art-ecologia')) document.getElementById('art-ecologia').textContent = translations[lang].artEcologia;
-    if (document.getElementById('desc-ecologia')) document.getElementById('desc-ecologia').textContent = translations[lang].descEcologia;
-    if (document.getElementById('art-biotecnologia')) document.getElementById('art-biotecnologia').textContent = translations[lang].artBiotecnologia;
-    if (document.getElementById('desc-biotecnologia')) document.getElementById('desc-biotecnologia').textContent = translations[lang].descBiotecnologia;
-
-    // Química
-    if (document.getElementById('titulo-quimica')) document.getElementById('titulo-quimica').textContent = translations[lang].tituloQuimica;
-    if (document.getElementById('encuentra-articulo')) document.getElementById('encuentra-articulo').textContent = translations[lang].encuentraArticulo;
-    if (document.getElementById('articulos-quimica')) document.getElementById('articulos-quimica').textContent = translations[lang].articulosQuimica;
-    if (document.getElementById('art-tabla')) document.getElementById('art-tabla').textContent = translations[lang].artTabla;
-    if (document.getElementById('desc-tabla')) document.getElementById('desc-tabla').textContent = translations[lang].descTabla;
-    if (document.getElementById('art-enlaces')) document.getElementById('art-enlaces').textContent = translations[lang].artEnlaces;
-    if (document.getElementById('desc-enlaces')) document.getElementById('desc-enlaces').textContent = translations[lang].descEnlaces;
-    if (document.getElementById('art-reacciones')) document.getElementById('art-reacciones').textContent = translations[lang].artReacciones;
-    if (document.getElementById('desc-reacciones')) document.getElementById('desc-reacciones').textContent = translations[lang].descReacciones;
-    if (document.getElementById('videos-quimica')) document.getElementById('videos-quimica').textContent = translations[lang].videosQuimica;
-    if (document.getElementById('desc-videos-quimica')) document.getElementById('desc-videos-quimica').textContent = translations[lang].descVideosQuimica;
-    if (document.getElementById('video-volcan')) document.getElementById('video-volcan').textContent = translations[lang].videoVolcan;
-    if (document.getElementById('video-map')) document.getElementById('video-map').textContent = translations[lang].videoMap;
+    // ... código removido ...
 }
+*/
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    // Referencias a los elementos del DOM.
+    // Elfsight Website Translator ahora maneja los idiomas automáticamente
+    
     // Esto es más eficiente que buscarlos cada vez que se usa la función.
     const inputHero = document.getElementById("input-busqueda");
     const inputFlotante = document.getElementById("input-busqueda-flotante");
