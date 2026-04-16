@@ -25,6 +25,7 @@ body {
     line-height: 1.6;
     background-color: var(--color-fondo-claro);
     color: var(--color-principal);
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -1017,4 +1018,53 @@ footer a:hover {
 
 .formulario-container.active .toggle-right{
     transform: translateX(200%);
+}
+
+/* =================================== */
+/* Estilos para Elfsight Website Translator */
+/* =================================== */
+
+/* Contenedor del widget de Elfsight */
+.elfsight-app-b206deca-e1e9-44f9-90a4-9359039894a0 {
+    z-index: 999 !important;
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Asegurar que el widget y sus elementos internos sean visibles */
+.elfsight-app-b206deca-e1e9-44f9-90a4-9359039894a0 * {
+    visibility: visible !important;
+    z-index: 999 !important;
+}
+
+/* Estilos para el iframe del widget */
+.elfsight-app-b206deca-e1e9-44f9-90a4-9359039894a0 iframe {
+    z-index: 999 !important;
+    position: relative !important;
+}
+
+/* Para pantallas pequeñas, ajustar posición */
+@media (max-width: 768px) {
+    .elfsight-app-b206deca-e1e9-44f9-90a4-9359039894a0 {
+        bottom: 10px !important;
+        right: 10px !important;
+    }
+}
+
+/* Asegurar que el header no cubra completamente el widget */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--color-fondo-medio);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
 }
