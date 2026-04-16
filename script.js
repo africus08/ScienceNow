@@ -356,14 +356,6 @@ function changeLanguage(lang) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Inicializar idioma
-    const selector = document.getElementById('selector-idioma');
-    const lang = localStorage.getItem('language') || 'es';
-    changeLanguage(lang);
-    selector.value = lang;
-    selector.addEventListener('change', () => {
-        changeLanguage(selector.value);
-    });
 
     // Referencias a los elementos del DOM.
     // Esto es más eficiente que buscarlos cada vez que se usa la función.
