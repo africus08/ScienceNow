@@ -276,6 +276,53 @@ const translations = {
         videoVolcan: "Wie man einen hausgemachten Vulkan macht",
         videoMap: "Karte der Chemie"
     }
+    pl : {  
+        navInicio: "Strona główna",
+        navCategorias: "Kategorie",
+        navArticulos: "Artykuły",
+        navComunidad: "Społeczność",
+        navContacto: "Kontakt",
+        navIniciar: "Zaloguj się",
+        titulo: "CienciAhora",
+        subtitulo: "Twój portal naukowy",
+        placeholderBusqueda: "Wyszukaj artykuł...",
+        btnBuscar: "Szukaj",
+        statArticulos: "Artykuły",
+        statVideos: "Filmy",
+        statColaboradores: "Współpracownicy",
+        queEncontraras: "Co znajdziesz tutaj?",
+        cardQuimica: "Chemia",
+        descQuimica: "Nauka o związkach chemicznych i ich właściwościach.",
+        cardTecnologia: "Technologia",
+        descTecnologia: "Zastosowania nauki w praktyce.",
+        cardBiologia: "Biologia",
+        descBiologia: "Nauka o życiu i organizmach.",
+        cardAstronomia: "Astronomia",
+        descAstronomia: "Nauka o wszechświecie i jego strukturze.",
+        cardFisica: "Fizyka",
+        descFisica: "Nauka o prawach panujących w wszechświecie.",
+        cardMedicina: "Medycyna",
+        descMedicina: "Nauka o zdrowiu i leczeniu chorób.",
+        articulosRecientes: "Ostatnie artykuły",
+        artGrafeno: "Grafen",
+        descGrafeno: "Właściwości i zastosowania grafenu w nauce materiałów.",
+        fechaGrafeno: "25 sierpnia 2025",
+        leerGrafeno: "Czytaj więcej",
+        artKevlar: "Kevlar",
+        descKevlar: "Właściwości i zastosowania Kevlara w nauce materiałów.",
+        fechaKevlar: "25 sierpnia 2025",
+        leerKevlar: "Czytaj więcej",
+        conoceComunidad: "Poznaj społeczność CienciAhora!",
+        mentesCuriosas: "To są ciekawostki i kreatywne głowy, które stworzyły ten projekt:",
+        colabMedialab: "MediaLab",
+        descMedialab: "\"UNIOVI Escuela Politécnica de Ingeniería de Gijón\"",
+        colabMiguel1: "Miguel Habtu",
+        descMiguel1: "\"Uczeń liceum, pasjonat nowych materiałów.\"",
+        colabMiguel2: "Miguel Habtu",
+        descMiguel2: "\"Uczeń liceum, pasjonat nowych materiałów.\"",
+        footerText: "&copy; 2025 CienciAhora | cienciahora@gmail.com"
+    }
+
 };
 // Función para cambiar el idioma
 function changeLanguage(lang) {
