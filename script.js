@@ -277,23 +277,102 @@ const translations = {
         videoMap: "Karte der Chemie"
     }
 };
-/* 
-// Función para cambiar el idioma - YA NO NECESARIA (Elfsight maneja traducciones automáticamente)
-// Esta función se dejó como referencia pero está deshabilitada.
-// Los textos aún están en el objeto 'translations' si necesitas consultarlos.
-
+// Función para cambiar el idioma
 function changeLanguage(lang) {
-    // ... código removido ...
+    localStorage.setItem('language', lang);
+
+    const setText = (id, text, useHtml = false) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (useHtml) el.innerHTML = text;
+        else el.textContent = text;
+    };
+
+    setText('nav-inicio', translations[lang].navInicio);
+    setText('nav-categorias', translations[lang].navCategorias);
+    setText('nav-articulos', translations[lang].navArticulos);
+    setText('nav-comunidad', translations[lang].navComunidad);
+    setText('nav-contacto', translations[lang].navContacto);
+    setText('nav-iniciar', translations[lang].navIniciar);
+    setText('titulo', translations[lang].titulo);
+    setText('subtitulo', translations[lang].subtitulo);
+    const inputBusqueda = document.getElementById('input-busqueda');
+    if (inputBusqueda) inputBusqueda.placeholder = translations[lang].placeholderBusqueda;
+    setText('btn-buscar', translations[lang].btnBuscar);
+    setText('stat-articulos', translations[lang].statArticulos);
+    setText('stat-videos', translations[lang].statVideos);
+    setText('stat-colaboradores', translations[lang].statColaboradores);
+    setText('que-encontraras', translations[lang].queEncontraras);
+    setText('card-quimica', translations[lang].cardQuimica);
+    setText('desc-quimica', translations[lang].descQuimica);
+    setText('card-tecnologia', translations[lang].cardTecnologia);
+    setText('desc-tecnologia', translations[lang].descTecnologia);
+    setText('card-biologia', translations[lang].cardBiologia);
+    setText('desc-biologia', translations[lang].descBiologia);
+    setText('card-astronomia', translations[lang].cardAstronomia);
+    setText('desc-astronomia', translations[lang].descAstronomia);
+    setText('card-fisica', translations[lang].cardFisica);
+    setText('desc-fisica', translations[lang].descFisica);
+    setText('card-medicina', translations[lang].cardMedicina);
+    setText('desc-medicina', translations[lang].descMedicina);
+    setText('articulos-recientes', translations[lang].articulosRecientes);
+    setText('art-grafeno', translations[lang].artGrafeno);
+    setText('desc-grafeno', translations[lang].descGrafeno);
+    setText('fecha-grafeno', translations[lang].fechaGrafeno);
+    setText('leer-grafeno', translations[lang].leerGrafeno);
+    setText('art-kevlar', translations[lang].artKevlar);
+    setText('desc-kevlar', translations[lang].descKevlar);
+    setText('fecha-kevlar', translations[lang].fechaKevlar);
+    setText('leer-kevlar', translations[lang].leerKevlar);
+    setText('conoce-comunidad', translations[lang].conoceComunidad);
+    setText('mentes-curiosas', translations[lang].mentesCuriosas);
+    setText('colab-medialab', translations[lang].colabMedialab);
+    setText('desc-medialab', translations[lang].descMedialab);
+    setText('colab-miguel1', translations[lang].colabMiguel1);
+    setText('desc-miguel1', translations[lang].descMiguel1);
+    setText('colab-miguel2', translations[lang].colabMiguel2);
+    setText('desc-miguel2', translations[lang].descMiguel2);
+    setText('footer-text', translations[lang].footerText, true);
+
+    if (document.getElementById('titulo-pagina')) setText('titulo-pagina', translations[lang].tituloPaginaBiologia);
+    if (document.getElementById('intro-biologia')) setText('intro-biologia', translations[lang].introBiologia);
+    if (document.getElementById('art-adn')) setText('art-adn', translations[lang].artAdn);
+    if (document.getElementById('desc-adn')) setText('desc-adn', translations[lang].descAdn);
+    if (document.getElementById('art-ecologia')) setText('art-ecologia', translations[lang].artEcologia);
+    if (document.getElementById('desc-ecologia')) setText('desc-ecologia', translations[lang].descEcologia);
+    if (document.getElementById('art-biotecnologia')) setText('art-biotecnologia', translations[lang].artBiotecnologia);
+    if (document.getElementById('desc-biotecnologia')) setText('desc-biotecnologia', translations[lang].descBiotecnologia);
+    if (document.getElementById('titulo-quimica')) setText('titulo-quimica', translations[lang].tituloQuimica);
+    if (document.getElementById('encuentra-articulo')) setText('encuentra-articulo', translations[lang].encuentraArticulo);
+    if (document.getElementById('articulos-quimica')) setText('articulos-quimica', translations[lang].articulosQuimica);
+    if (document.getElementById('art-tabla')) setText('art-tabla', translations[lang].artTabla);
+    if (document.getElementById('desc-tabla')) setText('desc-tabla', translations[lang].descTabla);
+    if (document.getElementById('art-enlaces')) setText('art-enlaces', translations[lang].artEnlaces);
+    if (document.getElementById('desc-enlaces')) setText('desc-enlaces', translations[lang].descEnlaces);
+    if (document.getElementById('art-reacciones')) setText('art-reacciones', translations[lang].artReacciones);
+    if (document.getElementById('desc-reacciones')) setText('desc-reacciones', translations[lang].descReacciones);
+    if (document.getElementById('videos-quimica')) setText('videos-quimica', translations[lang].videosQuimica);
+    if (document.getElementById('desc-videos-quimica')) setText('desc-videos-quimica', translations[lang].descVideosQuimica);
+    if (document.getElementById('video-volcan')) setText('video-volcan', translations[lang].videoVolcan);
+    if (document.getElementById('video-map')) setText('video-map', translations[lang].videoMap);
 }
-*/
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Elfsight Website Translator ahora maneja los idiomas automáticamente
-    
-    // Esto es más eficiente que buscarlos cada vez que se usa la función.
-    const inputHero = document.getElementById("input-busqueda");
-    const inputFlotante = document.getElementById("input-busqueda-flotante");
-    const buscadorFlotante = document.getElementById("buscador-flotante");
+    const selector = document.getElementById('selector-idioma');
+    const lang = localStorage.getItem('language') || 'es';
+
+    changeLanguage(lang);
+    if (selector) {
+        selector.value = lang;
+        selector.addEventListener('change', () => {
+            changeLanguage(selector.value);
+        });
+    }
+
+    // Esto es más eficiente que buscarlos cada vez que se usa la función.
+    const inputHero = document.getElementById("input-busqueda");
+    const inputFlotante = document.getElementById("input-busqueda-flotante");
+    const buscadorFlotante = document.getElementById("buscador-flotante");
     
     // Obtener los botones de búsqueda
     const botonesBusqueda = document.querySelectorAll(".btn");
@@ -315,27 +394,27 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Escuchar el evento 'keydown' en los campos de búsqueda
-    inputHero.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-            buscar(inputHero);
-        }
-    });
+    if (inputHero) {
+        inputHero.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                buscar(inputHero);
+            }
+        });
+    }
 
-    if (inputFlotante) {
-        inputFlotante.addEventListener("keydown", (event) => {
-            if (event.key === "Enter") {
-                buscar(inputFlotante);
-            }
-        });
-    }
+    if (inputFlotante) {
+        inputFlotante.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                buscar(inputFlotante);
+            }
+        });
+    }
 
-    // Añadir event listeners a todos los botones con la clase 'btn'
-    botonesBusqueda.forEach(button => {
-        button.addEventListener("click", () => {
-            // El botón está en el buscador del hero o en el buscador flotante
-            // Por lo que buscamos el input hermano para obtener el valor
-            const inputAsociado = button.closest(".buscador-hero") ? inputHero : inputFlotante;
-            buscar(inputAsociado);
+    // Añadir event listeners a todos los botones con la clase 'btn'
+    botonesBusqueda.forEach(button => {
+        button.addEventListener("click", () => {
+            const inputAsociado = button.closest(".buscador-hero") ? inputHero : inputFlotante;
+            if (!inputAsociado) return;
         });
     });
 
