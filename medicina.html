@@ -8,26 +8,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head> 
 <body>  
-    <header>
+    <div class="wrapper">
+        <header>
             <div class="logo">CienciAhora</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html" id="nav-inicio">Inicio</a></li>
-                    <li><a href="destacados" id="nav-categorias">Categorías</a></li>
-                    <li><a href="#" id="nav-articulos">Artículos destacados</a></li>
-                    <li><a href="#" id="nav-comunidad">Comunidad</a></li>
-                    <li><a href="#" id="nav-contacto">Contacto</a></li>
-                    <li>
-                        <select name="idioma" id="selector-idioma" aria-label="Selector de idioma">
-                            <option value="es" selected>ES Español</option>
-                            <option value="en">EN English</option>
-                            <option value="fr">FR Français</option>
-                            <option value="de">DE Deutsch</option>
-                        </select>
-                    </li>
-                </ul>
+            <nav class="underline-nav">
+                    <a href="index.html" id="nav-inicio">Inicio</a>
+                    <a href="destacados" id="nav-categorias">Categorías</a>
+                    <a href="#" id="nav-articulos">Artículos destacados</a>
+                    <a href="#" id="nav-comunidad">Comunidad</a>
+                    <a href="#" id="nav-contacto">Contacto</a>
+                    <a href="formulario.html" id="nav-iniciar">Iniciar Sesión </a>
+                    <ul>
+                        <li>
+                            <select name="idioma" id="selector-idioma" aria-label="Selector de idioma">
+                                <option value="es" selected>ES Español</option>
+                                <option value="en">EN English</option>
+                                <option value="fr">FR Français</option>
+                                <option value="de">DE Deutsch</option>
+                            </select>
+                        </li>
+                    </ul>
             </nav>
-    </header>
+        </header>
     <main>
         
     </main>
@@ -45,5 +47,6 @@
                 <a href="www.agenciasinc.es" target="_blank" aria-label="Agencia SINC"><i class="fas fa-microscope"></i></a>
             </div>
     </footer>
+    </div>
 </body>
 </html>
