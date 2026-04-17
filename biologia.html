@@ -31,24 +31,169 @@
             </nav>
         </header>
     <main>
-        <h1 id="titulo-pagina">Biología</h1>
-        <p id="intro-biologia">Bienvenido a la sección de Biología de CienciAhora. Aquí encontrarás artículos, noticias y recursos sobre los últimos avances en biología, investigaciones científicas y su impacto en el mundo natural.</p>
-        <section class="articulos-biologia">
-            <article>
-                <h2 id="art-adn">El ADN y su Papel en la Herencia</h2>
-                <p id="desc-adn">El ácido desoxirribonucleico (ADN) es la molécula que contiene la información genética de los seres vivos. Aprende sobre su estructura, función y cómo se transmite de generación en generación.</p>
-            </article>
-            <article>
-                <h2 id="art-ecologia">Ecología: Entendiendo los Ecosistemas</h2>
-                <p id="desc-ecologia">La ecología estudia las interacciones entre los organismos y su entorno. Descubre cómo funcionan los ecosistemas y la importancia de conservar la biodiversidad para el equilibrio del planeta.</p>
-            </article>
-            <article>
-                <h2 id="art-biotecnologia">Biotecnología: Innovaciones para el Futuro</h2>
-                <p id="desc-biotecnologia">La biotecnología utiliza organismos vivos para desarrollar productos y tecnologías que mejoran nuestra vida. Explora las aplicaciones de la biotecnología en medicina, agricultura y medio ambiente.</p>
-            </article>
-        </section>
+        <section class="categoria-seccion" id="biologia">
+                <h2 id="titulo-biologia">Biología </h2>
+                <section class="filtro-articulos">
+                    <h3 id="encuentra-articulo">Encuentra el artículo perfecto</h3>
+                    <form id="formulario-buscador">
+
+                        <div class="grupo-filtro">
+                            <input type="text" id="filtro-titulo" placeholder="Buscar por título...">
+                        </div>
+            
+                        <div class="grupo-filtro">
+                            <label for="filtro-dificultad">Nivel:</label>
+                            <select id="filtro-dificultad">
+                               <option value="todos" selected>Todos</option>
+                               <option value="Básico">Básico</option>
+                               <option value="Intermedio">Intermedio</option>
+                               <option value="Avanzado">Avanzado</option>
+                            </select>
+                        </div>
+            
+                        <div class="grupo-filtro">
+                           <label for="filtro-fecha">Fecha:</label>
+                           <select id="filtro-fecha">
+                              <option value="todos" selected>Recientes</option>
+                              <option value="antiguos">Antiguos</option>
+                           </select>
+                        </div>
+
+                        <button type="submit" class="btn" onclick="buscar()">Buscar</button>
+
+                    </form>
+                 </section>
+
+                <div class="subapartado">
+                   <h3 id="articulos-biologia">Artículos</h3>
+                   <div class="contenedor-elementos">
+                      <article class="articulo-card">
+                         <img src="Imagenes/biologia.jpg" alt="Imagen del artículo de Biología">
+                         <div class="articulo-contenido">
+                            <h4 id="art-adn">El ADN y su rol en la herencia</h4>
+                            <p id="desc-adn">El ácido desoxirribonucleico (ADN) es la molécula que contiene la información genética de los seres vivos. Aprende sobre su estructura, función y cómo se transmite de generación en generación.</p>
+                            <div class="meta-data">
+                               <span class="dificultad" aria-label="Nivel: Básico">Nivel: Básico</span>
+                               <span class="fecha-publicacion" aria-label="Publicado el"> 08 de septiembre, 2025</span>
+                            </div>
+                            <a href="#" class="btn-leer-mas">Leer más</a>
+                         </div>
+                      </article>
+
+                      <article class="articulo-card">
+                         <img src="Imagenes/biologia.jpg" alt="Imagen del artículo de Biología">
+                         <div class="articulo-contenido">
+                            <h4 id="art-ecologia">Ecología: Entendiendo los ecosistemas</h4>
+                            <p id="desc-ecologia">La ecología estudia las interacciones entre los organismos y su entorno. Descubre cómo funcionan los ecosistemas y la importancia de conservar la biodiversidad para el equilibrio del planeta.</p>
+                            <div class="meta-data">
+                               <span class="dificultad" aria-label="Nivel: Intermedio">Nivel: Intermedio</span>
+                               <span class="fecha-publicacion" aria-label="Publicado el"> 08 de septiembre, 2025</span>
+                            </div>
+                            <a href="#" class="btn-leer-mas">Leer más</a>
+                         </div>
+                      </article>
+
+                      <article class="articulo-card">
+                         <img src="Imagenes/biologia.jpg" alt="Imagen del artículo de Biología">
+                         <div class="articulo-contenido">
+                            <h4 id="art-biotecnologia">Biotecnología: Innovaciones para el futuro</h4>
+                            <p id="desc-biotecnologia">La biotecnología utiliza organismos vivos para desarrollar productos y tecnologías que mejoran nuestra vida. Explora las aplicaciones de la biotecnología en medicina, agricultura y medio ambiente.</p>
+                            <div class="meta-data">
+                               <span class="dificultad" aria-label="Nivel: Avanzado">Nivel: Avanzado</span>
+                               <span class="fecha-publicacion" aria-label="Publicado el"> 08 de septiembre, 2025</span>
+                            </div>
+                            <a href="#" class="btn-leer-mas">Leer más</a>
+                         </div>
+                      </article>
+                    </div>
+                </div>
         
-    </main>
+            <hr class="separador">
+
+                <div class="subapartado">
+                   <h3 id="videos-biologia">Videos </h3>
+                   <p id="desc-videos-biologia">Videos educativos y experimentos para entender mejor la biología.</p>
+                   
+                   <div class="contenedor-elementos">
+                      <a href="https://youtu.be/example_biology_video" target="_blank" class="video-card">
+                         <img src="https://img.youtube.com/vi/example/hqdefault.jpg" alt="Miniatura del video">
+                         <div class="video-overlay">
+                            <i class="fas fa-play"></i> 
+                         </div>
+                         <h4 id="video-cells">Experimentos de biología caseros</h4>
+                         <div class="meta-data">
+                            <span class="idioma" aria-label="Idioma: Español">🇪s</span>
+                            <span class="dificultad" aria-label="Nivel: Básico"> Nivel: Básico</span>
+                            <span class="fecha-publicacion" aria-label="Publicado el">08 de septiembre, 2025</span>
+                         </div>
+                      </a>
+                   </div>
+                
+                   <div class="contenedor-elementos">
+                      <a href="https://youtu.be/example_biology_map" target="_blank" class="video-card">
+                         <img src="https://img.youtube.com/vi/example/hqdefault.jpg" alt="Miniatura del video">
+                         <div class="video-overlay">
+                            <i class="fas fa-play"></i> 
+                         </div>
+                         <h4 id="video-map-bio">Map of Biology</h4>
+                         <div class="meta-data">
+                            <span class="idioma" aria-label="Idioma: Inglés">🇬🇧</span>
+                            <span class="dificultad" aria-label="Nivel: Intermedio">Nivel: Intermedio</span>
+                            <span class="fecha-publicacion" aria-label="Publicado el">08 de septiembre, 2025</span>
+                         </div>
+                       </a>
+                   </div>
+
+                   <div class="contenedor-elementos">
+                      <a href="https://youtu.be/example_evolution" target="_blank" class="video-card">
+                         <img src="https://img.youtube.com/vi/example/hqdefault.jpg" alt="Miniatura del video">
+                         <div class="video-overlay">
+                            <i class="fas fa-play"></i> 
+                         </div>
+                         <h4>La evolución de las especies</h4>
+                         <div class="meta-data">
+                            <span class="idioma" aria-label="Idioma: Español">🇪s</span>
+                            <span class="dificultad" aria-label="Nivel: Intermedio"> Nivel: Intermedio</span>
+                            <span class="fecha-publicacion" aria-label="Publicado el">08 de septiembre, 2025</span>
+                         </div>
+                      </a>
+                   </div>
+                </div>
+
+<div class="videos-biologia-contenedor-elementos">
+                      <a href="https://youtu.be/example_evolution" target="_blank" class="video-card">
+                         <img src="https://img.youtube.com/vi/example/hqdefault.jpg" alt="Miniatura del video">
+                         <div class="video-biologia-card-overlay">
+                            <i class="fas fa-play"></i> 
+                         </div>
+                         <h4>La evolución de las especies</h4>
+                         <div class="meta-data">
+                            <span class="idioma" aria-label="Idioma: Español">🇪s</span>
+                            <span class="dificultad" aria-label="Nivel: Intermedio"> Nivel: Intermedio</span>
+                            <span class="fecha-publicacion" aria-label="Publicado el">08 de septiembre, 2025</span>
+                         </div>
+                      </a>
+                   </div>
+
+        
+            <hr class="separador">
+
+                <div class="organizaciones-subapartado">
+                   <h3>Organizaciones Oficiales</h3>
+                   <p class="subapartado-descripcion">Recursos confiables y enlaces a instituciones de prestigio para profundizar.</p>
+                   <div class="contenedor-banners">
+                   
+                    <a href="https://www.rseq.org/" target="_blank" class="banner-card">
+                      <img src="Imagenes/rseq.jpg" alt="Logo de la Real Sociedad Española de Biología">
+                      <h4>RSEB</h4>
+                      <p>Real Sociedad Española de Biología</p>
+                   </a>
+                   <a href="https://www.iubs.org/" target="_blank" class="banner-card">
+                      <img src="Imagenes/iupsv.png" alt="Logo de la organización">
+                      <h4>IUBS</h4>
+                      <p>Unión Internacional de Ciencias Biológicas</p>
+                   </a>
+                     </div>
     <footer>
             <p id="footer-text">&copy; 2025 CienciAhora | 
                 <a href="mailto:materia.ciencia@gmail.com">cienciahora@gmail.com</a>
