@@ -1,75 +1,105 @@
 const SUPPORTED_TRANSLATION_LANGUAGES = ['es', 'en', 'fr', 'de'];
-const GOOGLE_TRANSLATE_ELEMENT_ID = 'google_translate_element';
 const DEFAULT_LANGUAGE = 'es';
 
-function setGoogleTranslateCookie(language) {
+function getLanguageCookie() {
+    const name = 'googtrans=';
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookies = decodedCookie.split(';');
+    
+    for (let cookie of cookies) {
+        cookie = cookie.trim();
+        if (cookie.indexOf(name) === 0) {
+            return cookie.substring(name.length);
+        }
+    }
+    return null;
+}
+
+function setLanguageCookie(language) {
     const lang = SUPPORTED_TRANSLATION_LANGUAGES.includes(language) ? language : DEFAULT_LANGUAGE;
     const cookieValue = `/es/${lang}`;
-    document.cookie = `googtrans=${cookieValue};path=/`;
+    const date = new Date();
+    date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+    const expires = 'expires=' + date.toUTCString();
+    document.cookie = `googtrans=${cookieValue};${expires};path=/;SameSite=Lax`;
+    localStorage.setItem('selectedLanguage', lang);
 }
 
-function createGoogleTranslateElement() {
-    let container = document.getElementById(GOOGLE_TRANSLATE_ELEMENT_ID);
-    if (!container) {
-        container = document.createElement('div');
-        container.id = GOOGLE_TRANSLATE_ELEMENT_ID;
-        container.style.display = 'none';
-        document.body.appendChild(container);
-    }
-}
-
-function applyGoogleTranslateStyles() {
-    const style = document.createElement('style');
-    style.textContent = `
-        .goog-te-banner-frame.skiptranslate, .goog-logo-link, .goog-te-gadget-icon {
-            display: none !important;
-        }
-        body {
-            top: 0 !important;
-        }
-    `;
-    document.head.appendChild(style);
+function getStoredLanguage() {
+    return localStorage.getItem('selectedLanguage') || DEFAULT_LANGUAGE;
 }
 
 function loadGoogleTranslateScript() {
-    createGoogleTranslateElement();
-    applyGoogleTranslateStyles();
-    const translateScript = document.createElement('script');
-    translateScript.type = 'text/javascript';
-    translateScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    translateScript.async = true;
-    document.body.appendChild(translateScript);
+    const script = document.createElement('script');
+    script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    document.head.appendChild(script);
 }
 
-function googleTranslateElementInit() {
-    if (typeof google !== 'undefined' && google.translate && google.translate.TranslateElement) {
-        new google.translate.TranslateElement({
-            pageLanguage: 'es',
-            includedLanguages: 'en,fr,de',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-        }, GOOGLE_TRANSLATE_ELEMENT_ID);
-    }
-}
+window.googleTranslateElementInit = function() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'en,fr,de',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+    }, 'google_translate_element');
+};
 
-function initializeTranslation() {
-    const selector = document.getElementById('selector-idioma');
-    const storedLanguage = localStorage.getItem('language') || DEFAULT_LANGUAGE;
-    setGoogleTranslateCookie(storedLanguage);
-    if (selector) {
-        selector.value = storedLanguage;
-        selector.addEventListener('change', () => {
-            const selectedLanguage = selector.value;
-            localStorage.setItem('language', selectedLanguage);
-            setGoogleTranslateCookie(selectedLanguage);
-            window.location.reload();
-        });
+function changeLanguage(lang) {
+    const supportedLang = SUPPORTED_TRANSLATION_LANGUAGES.includes(lang) ? lang : DEFAULT_LANGUAGE;
+    setLanguageCookie(supportedLang);
+    
+    // Cambiar idioma en Google Translate si está disponible
+    const gTranslateSelect = document.querySelector('.goog-te-combo');
+    if (gTranslateSelect) {
+        gTranslateSelect.value = supportedLang;
+        gTranslateSelect.dispatchEvent(new Event('change', { bubbles: true }));
     }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    initializeTranslation();
+    // Cargar Google Translate
     loadGoogleTranslateScript();
+    
+    // Crear contenedor oculto para Google Translate
+    if (!document.getElementById('google_translate_element')) {
+        const gtElement = document.createElement('div');
+        gtElement.id = 'google_translate_element';
+        gtElement.style.display = 'none';
+        document.body.appendChild(gtElement);
+    }
+    
+    // Ocultar elementos de Google Translate
+    const style = document.createElement('style');
+    style.textContent = `
+        #google_translate_element { display: none !important; }
+        .goog-te-banner-frame { display: none !important; }
+        .goog-te-balloon-frame { display: none !important; }
+        .goog-logo-link { display: none !important; }
+        .goog-te-gadget-icon { display: none !important; }
+        body { top: 0 !important; }
+    `;
+    document.head.appendChild(style);
+    
+    // Sincronizar selector con Google Translate
+    const selector = document.getElementById('selector-idioma');
+    const storedLanguage = getStoredLanguage();
+    
+    if (selector) {
+        selector.value = storedLanguage;
+        
+        selector.addEventListener('change', function() {
+            changeLanguage(this.value);
+        });
+    }
+    
+    // Aplicar idioma guardado después de cargar Google Translate
+    setTimeout(() => {
+        const savedLang = getStoredLanguage();
+        if (savedLang !== DEFAULT_LANGUAGE) {
+            changeLanguage(savedLang);
+        }
+    }, 1500);
 
     // Esto es más eficiente que buscarlos cada vez que se usa la función.
     const inputHero = document.getElementById("input-busqueda");
